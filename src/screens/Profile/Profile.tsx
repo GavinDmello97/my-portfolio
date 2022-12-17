@@ -47,9 +47,7 @@ const Profile = (props: any) => {
           {profile.about && profile.about.length > 0 && (
             <ProfileAbout aboutMe={profile.about} />
           )}
-          {profile.about && profile.about.length > 0 && (
-            <ProfileAbout aboutMe={profile.about} />
-          )}
+          {profile.resume && <ProfileAbout aboutMe={profile.about} />}
         </div>
       </div>
     );

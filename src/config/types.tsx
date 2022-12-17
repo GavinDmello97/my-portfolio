@@ -1,6 +1,3 @@
-import { To } from "react-router-dom";
-import { CSSModule } from "reactstrap/types/lib/utils";
-
 export type User = {
   first_name: string;
   middle_name: string;
@@ -14,6 +11,36 @@ export type User = {
   social_links: SocialLinks;
   display_picture: string;
   about: string;
+  resume: UserResume;
+};
+
+export type UserResume = {
+  bio: string;
+  education: UserResumeEducation[];
+  employment: UserResumeEmployment[];
+  skills: UserResumeSkill[];
+};
+
+export type UserResumeEducation = {
+  university_name: string;
+  start_year: string;
+  end_year: string;
+  degree: string;
+  specialization: string;
+  subjects: string[];
+};
+
+export type UserResumeEmployment = {
+  company_name: string;
+  start_year: string;
+  end_year: string;
+  job_description: string;
+  tech_stack: string[];
+};
+
+export type UserResumeSkill = {
+  skill_name: string;
+  percentage: number;
 };
 
 export type SocialLinks = {
