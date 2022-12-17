@@ -61,7 +61,7 @@ const MainRouter = () => {
         {/* <Footer /> */}
         <div
           className={classNames(
-            "theme-toggler d-none d-sm-block",
+            "theme-toggler d-none d-md-block",
             isDark ? "bg-dark" : "bg-white"
           )}
           onClick={() => {
