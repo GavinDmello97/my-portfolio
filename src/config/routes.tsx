@@ -6,16 +6,16 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import Footer from "./components/functional/Footer";
-import Header from "./components/functional/Header";
-import { Profile } from "./screens/index";
-import ScrollToTop from "./components/generic/scrollToTop";
-import NotFound from "./components/generic/NotFound";
+import Footer from "../components/functional/Footer";
+import Header from "../components/functional/Header";
+import { Profile } from "../screens/index";
+import ScrollToTop from "../components/generic/scrollToTop";
+import NotFound from "../components/generic/NotFound";
 // import NoInternetWrapper from "./generic/NoInternetWrapper";
-import NoInternet from "./components/generic/NoInternet";
+import NoInternet from "../components/generic/NoInternet";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
-import { toggleTheme } from "./redux/actionReducers/rootReducer";
+import { toggleTheme } from "../redux/actionReducers/rootReducer";
 
 const MainRouter = () => {
   let location = useLocation();
@@ -32,7 +32,7 @@ const MainRouter = () => {
     const { isDark } = state.rootState;
 
     return (
-      <div className="col-12 flex-1  d-flex flex-column justify-content-start ">
+      <div className="col-12 flex-1  d-flex flex-column justify-content-start  ">
         <Header />
 
         <Routes>
@@ -61,21 +61,28 @@ const MainRouter = () => {
         {/* <Footer /> */}
         <div
           className={classNames(
-            "position-absolute theme-toggler  ",
-            isDark ? "dark-theme" : ""
+            "theme-toggler d-none d-sm-block",
+            isDark ? "bg-dark" : "bg-white"
           )}
           onClick={() => {
             dispatch(toggleTheme(!isDark));
           }}
         >
-          <img
-            src={
-              isDark
-                ? "https://img.icons8.com/ios-glyphs/90/ffffff/bright-moon--v1.png"
-                : "https://img.icons8.com/fluency/96/null/summer.png"
-            }
-            style={{ width: 20, height: 20 }}
-          />
+          {isDark ? (
+            <img
+              src={
+                "https://img.icons8.com/ios-glyphs/90/ffffff/bright-moon--v1.png"
+              }
+              style={{ height: 30 }}
+            />
+          ) : (
+            <img
+              src={
+                "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/128/FFA300/external-sun-summer-tanah-basah-glyph-tanah-basah.png"
+              }
+              style={{ height: 30 }}
+            />
+          )}
         </div>
       </div>
     );

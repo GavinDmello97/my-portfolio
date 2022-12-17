@@ -1,5 +1,5 @@
 import "./App.scss";
-import Routes from "./routes";
+import Routes from "./config/routes";
 import { Provider } from "react-redux";
 import { store } from "./redux/config/configureStore";
 function App() {
