@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.theme-toggler {
+  position:absolute;
+    bottom: 30px;
+  padding-inline: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #777;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+
+  color: 'red';
+}
+
+
+.nav-pills .nav-link {
+  color: #fff;
+  cursor: default;
+  background-color: #868686;
+}
+
+.navbar .navbar-nav > li > a {
+  color: #151f2d;
+}
+
+.navbar .navbar-nav > li > a:hover {
+  color: #0450ba;
+}
+
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+
+// .animated-background {
+//     width: 100%;
+//     display: grid;
+//     place-items: center;
+//     margin: 0;
+//     padding: 0 24px;
+//     background-image: url("./assets/svgs/Wave.svg") ;
+//     background-repeat: no-repeat;
+//     background-size: 600% 100%;
+//     background-position: -2000px 0;
+//     color: #f9f9f9;
+//     font-family: "Euclid Circular A";
+//     animation: gradient 5s infinite alternate-reverse linear ;
+  
+// }
+
+@keyframes gradient {
+  100% {
+    background-size: 800% 100%;
+
+
+  }
+}

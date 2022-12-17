@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
+
+.header-cover {
+    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: 0;
+}
+
+.personal-profile {
+    color: #fff;
+    padding-top: 90px;
+
+    b, span, a, div  {
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        text-align: start;
+    }
+
+    span {
+        
+    }
+
+    b {
+        opacity: 0.7;
+    }
+
+    .personal-profile__name {
+        font-size: 52px;
+        line-height: 50px;
+        font-weight: 600;
+    }
+
+
+  
+
+
+}
+
+.profile-about {
+    width: 100%;
+}
+
+
+
+.link {
+    opacity: 0.5;
+}
+
+.link:hover {
+    opacity: 1;
+}
+
+
