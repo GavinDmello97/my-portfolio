@@ -30,6 +30,11 @@
     }
     
   }
+
+  .animated-text {
+    
+    color:white
+  }
   
   
 }
@@ -41,6 +46,7 @@
   }
   
 }
+
 .button-style {
   background-color: transparent;
   i,span {
@@ -49,6 +55,17 @@
   
 }
 
+
+
+.animated-text {
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end);  
+  font-weight: 600;
+  color:rgb(123, 123, 123)
+}
 
 
 * {
@@ -158,14 +175,6 @@ address{
 } */
 
 
-.animated-text {
-  font-size: 32px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  animation: type 4s steps(60, end);  
-  font-weight: 600;
-}
 
 @keyframes type{ 
   from { width: 0; } 
