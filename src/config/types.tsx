@@ -11,7 +11,7 @@ export type User = {
   social_links: SocialLinks;
   display_picture: string;
   about: string;
-  resume: UserResume;
+  resume?: UserResume;
 };
 
 export type UserResume = {
