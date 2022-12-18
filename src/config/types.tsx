@@ -36,11 +36,15 @@ export type UserResumeEducation = {
   degree: string;
   specialization: string;
   subjects: string[];
+  gpa?: string;
 };
 
 export type UserResumeEmployment = {
+  position_title: string;
   company_name: string;
+  start_month: string;
   start_year: string;
+  end_month: string;
   end_year: string;
   job_description: string;
   tech_stack: string[];

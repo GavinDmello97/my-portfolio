@@ -42,7 +42,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
           animate={controls}
           transition={{ duration: 2 }}
         >
-          <p className="col-12 py-4">{aboutMe}</p>
+          <p className="col-12 py-3">{aboutMe}</p>
         </motion.div>
         {/* </Animate> */}
         <Button
@@ -54,7 +54,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
           Download CV
         </Button>
       </div>
-      <hr></hr>
+      <hr className="mb-0"></hr>
       {/* window.open('https://myapi.com/download/file-name') */}
     </div>
   );

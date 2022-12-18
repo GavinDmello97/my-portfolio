@@ -33,7 +33,7 @@ const MainRouter = () => {
 
     return (
       <div className="col-12 flex-1  d-flex flex-column justify-content-start  ">
-        <Header />
+        {/* <Header /> */}
 
         <Routes>
           {/* Home */}
