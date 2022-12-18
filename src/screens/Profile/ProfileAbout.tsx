@@ -3,7 +3,7 @@ import { Button } from "antd";
 import Generic from "../../components/generic/Generic";
 import { MutableRefObject, useRef, useState } from "react";
 import useIntersection from "../../components/generic/useIntersection";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 type ProfileAboutType = {
   aboutMe: string | null;
@@ -17,10 +17,11 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
     ref as MutableRefObject<HTMLDivElement>,
     "0px"
   ); // Trigger as soon as the element becomes visible
+  const controls = useAnimation();
 
   if (inViewport && !isInViewport) {
-    console.log("About", inViewport, isInViewport);
     setViewStatus(true);
+    controls.start({ opacity: 1, transform: "translateX(0px)" });
   }
 
   return (
@@ -38,7 +39,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         > */}
         <motion.div
           initial={{ opacity: 0, transform: "translateX(300px)" }}
-          animate={{ opacity: 1, transform: "translateX(0px)" }}
+          animate={controls}
           transition={{ duration: 2 }}
         >
           <p className="col-12 py-4">{aboutMe}</p>
