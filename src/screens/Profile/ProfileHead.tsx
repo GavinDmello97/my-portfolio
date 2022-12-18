@@ -65,9 +65,9 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
       {/* Foreground Content Container */}
       <div className="container " style={{ zIndex: 400 }}>
         {/* Profile Content Container */}
-        <div className=" personal-profile  col-12 d-flex py-5 align-items-center ">
+        <div className=" personal-profile  col-12 d-flex flex-column flex-md-row py-5 align-items-center ">
           {/* Profile Left Section */}
-          <div className="col-0 col-md-5 col-lg-4 col-xl-3   d-none d-md-flex px-3">
+          <div className="col-12 col-md-5 col-lg-4 col-xl-3   d-flex px-3">
             <Image
               className="container-fluid col-12 p-0 rounded-2   "
               style={{
