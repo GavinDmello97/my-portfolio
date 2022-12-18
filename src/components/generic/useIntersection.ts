@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default (element: React.MutableRefObject<HTMLInputElement>, rootMargin: any) => {
-    const [isVisible, setState] = useState(false);
+const useIntersection = (
+  element: React.MutableRefObject<HTMLDivElement>,
+  rootMargin: any
+) => {
+  const [isVisible, setState] = useState(false);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setState(entry.isIntersecting);
-                    observer.unobserve(element.current);
-                }
-            },
-            {
-                rootMargin
-            }
-        );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setState(entry.isIntersecting);
+      },
+      { rootMargin }
+    );
 
-        element.current && observer.observe(element.current);
-        return () => {
-            // observer.unobserve(element.current);
-        };
-    }, [element, rootMargin]);
+    element.current && observer.observe(element.current);
 
-    return isVisible;
+    return () => observer.unobserve(element.current);
+  }, []);
+
+  return isVisible;
 };
+
+export default useIntersection;

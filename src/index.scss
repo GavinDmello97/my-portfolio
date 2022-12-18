@@ -15,28 +15,76 @@
     background-color: transparent;
   }
 
+
+  .menu-item:hover {
+    color: white;
+
+    i, span, div {
+      color: white;
+
+    }
+  }
+
+  .menu-item:active {
+    color: white;
+    i, span, div {
+      background-color: transparent;
+      color: white;
+
+    }
+  }
+
+  .menu-item {
+    i, span, div {
+      color: rgba(255, 255, 255, 0.6)
+    }
+  }
+
   
   .button-style:hover {
     background-color: #3B71CA;
     i,span {
       color:white
-    }
-    
+    } 
   }
+
   .button-style {
     background-color: transparent;
-    i,span {
-      color:white
-    }
-    
+    i,span, div {
+      color:white;
+      background-color: transparent;
+    }    
   }
 
   .animated-text {
-    
     color:white
   }
   
-  
+}
+
+
+.menu-item:hover {
+  color: black;
+
+  i, span, div {
+    color: black;
+
+  }
+}
+
+.menu-item:active {
+  color: black;
+  i, span, div {
+    background-color: transparent;
+    color: black;
+
+  }
+}
+
+.menu-item {
+  i, span, div {
+    color: rgba(0, 0, 0, 0.6)
+  }
 }
 
 .button-style:hover {
@@ -62,7 +110,7 @@
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  animation: type 4s steps(60, end);  
+  animation: type 6s steps(60, end);  
   font-weight: 600;
   color:rgb(123, 123, 123)
 }

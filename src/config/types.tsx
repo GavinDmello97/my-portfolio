@@ -1,4 +1,14 @@
+import { MenuProps } from "antd";
+
 export type User = {
+  profile: UserProfile;
+  about: string | null;
+  resume: UserResume | null;
+  projects: Project[] | null;
+  blogs: Blog[] | null;
+};
+
+export type UserProfile = {
   first_name: string;
   middle_name: string;
   last_name: string;
@@ -10,12 +20,10 @@ export type User = {
   address: string;
   social_links: SocialLinks;
   display_picture: string;
-  about: string;
-  resume?: UserResume;
 };
 
 export type UserResume = {
-  bio: string;
+  bio?: string;
   education: UserResumeEducation[];
   employment: UserResumeEmployment[];
   skills: UserResumeSkill[];
@@ -50,3 +58,9 @@ export type SocialLinks = {
   twitter: string;
   stack_overflow: string;
 };
+
+export type Project = {};
+
+export type Blog = {};
+
+export type MenuItem = Required<MenuProps>["items"][number];

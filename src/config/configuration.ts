@@ -2,6 +2,42 @@ const colorCodes: Object = {
   default: "#151f2d",
 };
 
+const dataObjects = {
+  userProfileNavigator: {
+    profile: {
+      key: "profile",
+      icon: "fa fa-id-card-o fa-lg",
+      title: "Profile",
+      scrollTo: "",
+    },
+    about: {
+      key: "about",
+      icon: "fa fa-bullhorn fa-lg",
+      title: "About",
+      scrollTo: "",
+    },
+
+    resume: {
+      key: "resume",
+      icon: "fa fa-book fa-lg",
+      title: "Resume",
+      scrollTo: "",
+    },
+    projects: {
+      key: "projects",
+      icon: "fa fa-desktop fa-lg",
+      title: "Projects",
+      scrollTo: "",
+    },
+    blogs: {
+      key: "blogs",
+      icon: "fa fa-rss-square fa-lg",
+      title: "Blogs",
+      scrollTo: "",
+    },
+  },
+};
+
 const icons: any = {
   bookmark_selected: require("../assets/icons/bookmark_selected.png"),
   bookmark_hover: require("../assets/icons/bookmark_hover.png"),
@@ -52,4 +88,12 @@ const randomColorGenerator: any = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-export { colorCodes, icons, randomColorGenerator, images, gifs, svgs };
+export {
+  colorCodes,
+  icons,
+  randomColorGenerator,
+  images,
+  gifs,
+  svgs,
+  dataObjects,
+};

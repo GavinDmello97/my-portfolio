@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Link, To } from "react-router-dom";
 import { images } from "../../config/configuration";
 import { Image } from "antd";
-import { User } from "../../config/types";
+import { User, UserProfile } from "../../config/types";
 import { CSSModule } from "reactstrap/types/lib/utils";
 import { formattingPhone } from "../../config/utils";
 type ProfileInfoType = {
@@ -29,7 +29,7 @@ type FullNameType = {
   className?: string;
 };
 
-const ProfileHead = ({ profile }: { profile: User }) => {
+const ProfileHead = ({ details }: { details: UserProfile }) => {
   const {
     first_name,
     last_name,
@@ -42,7 +42,7 @@ const ProfileHead = ({ profile }: { profile: User }) => {
     address,
     social_links,
     display_picture,
-  } = profile;
+  } = details;
   const { github, linkedIn, stack_overflow, facebook, twitter } = social_links;
 
   const phoneNumber = formattingPhone(phone_country_code, phone);
@@ -67,7 +67,7 @@ const ProfileHead = ({ profile }: { profile: User }) => {
         {/* Profile Content Container */}
         <div className=" personal-profile  col-12 d-flex py-5 align-items-center ">
           {/* Profile Left Section */}
-          <div className="col-0 col-md-4 col-lg-3  d-none d-md-flex">
+          <div className="col-0 col-md-5 col-lg-4 col-xl-3   d-none d-md-flex px-3">
             <Image
               className="container-fluid col-12 p-0 rounded-2   "
               style={{
@@ -80,7 +80,7 @@ const ProfileHead = ({ profile }: { profile: User }) => {
             />
           </div>
           {/* Profile Right Section */}
-          <div className="col-12 offset-md-1 col-md-7 col-lg-8 px-3 px-md-0 py-3 ">
+          <div className="col-12 col-md-7 col-lg-7 offset-xl-1 px-3  py-3 ">
             {/* Profile Full Name */}
             <FullName
               className="personal-profile__name"
@@ -213,7 +213,7 @@ var ProfileInfo = ({
 }: ProfileInfoType) => {
   return (
     <div className={classNames(containerClassName)} style={containerStyle}>
-      <b className="col-12 col-md-3 ">{title}:</b>
+      <b className="col-12 col-md-3 noselect">{title}:</b>
       {isValueLink ? (
         <a className=" col-12 col-md-9  text-decoration-none " href={href}>
           {value}
