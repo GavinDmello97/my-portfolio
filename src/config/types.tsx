@@ -40,6 +40,7 @@ export type UserResumeEducation = {
 };
 
 export type UserResumeEmployment = {
+  position_title: string;
   company_name: string;
   start_month: string;
   start_year: string;

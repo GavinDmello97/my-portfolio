@@ -1,11 +1,16 @@
 import classNames from "classnames";
 import { Button, Tag, Timeline } from "antd";
 import Generic from "../../components/generic/Generic";
-import { UserResume, UserResumeEducation } from "../../config/types";
+import {
+  UserResume,
+  UserResumeEducation,
+  UserResumeEmployment,
+} from "../../config/types";
 import { useState, useRef, MutableRefObject } from "react";
 import useIntersection from "../../components/generic/useIntersection";
 import { AnimationControls, motion, useAnimation } from "framer-motion";
 import { useSelector } from "react-redux";
+import ReactQuill from "react-quill";
 
 type ProfileAboutType = {
   resume: UserResume;
@@ -44,6 +49,10 @@ const ProfileResume = ({ resume, className = "" }: ProfileAboutType) => {
             {education && education.length > 0 && (
               <ResumeEducation educationList={education} />
             )}
+
+            {employment && employment.length > 0 && (
+              <ResumeEmployment employmentList={employment} />
+            )}
           </motion.div>
         )}
         {/* {education && education.length > 0 && } */}
@@ -67,13 +76,13 @@ var ResumeEducation = ({
   });
   const { isDark } = state.rootState;
   return (
-    <div className="resume-education-container">
+    <div className="resume-e-container">
       <p
-        className={classNames("resume-title fw-bold py-2")}
+        className={classNames("resume-title pt-3")}
         style={
           isDark
-            ? { color: "rgba(255,255,255, 0.6)" }
-            : { color: "rgba(0,0,0,0.6" }
+            ? { color: "rgba(255,255,255, 0.8)" }
+            : { color: "rgba(0,0,0,0.8" }
         }
       >
         Education
@@ -86,14 +95,14 @@ var ResumeEducation = ({
                 <div className="col-12 ">
                   <p
                     className="text-primary fw-bold col-12 mb-0"
-                    style={{ fontSize: 18 }}
+                    style={{ fontSize: 16 }}
                   >
                     {education.university_name}
                   </p>
-                  <p className="col-12 mb-0">
+                  <p className="col-12 mb-0" style={{ fontSize: 14 }}>
                     {`${education.degree} - ${education.specialization}`}
                   </p>
-                  <p className="col-12">
+                  <p className="col-12 mb-2" style={{ fontSize: 14 }}>
                     {education.start_year} - {education.end_year}{" "}
                     {education.gpa && (
                       <Tag
@@ -101,6 +110,7 @@ var ResumeEducation = ({
                         style={{
                           color: "white",
                           border: "0.5px solid rgba(255,255,255,0.5)",
+                          fontSize: 12,
                         }}
                       >
                         GPA: {education.gpa} of 4.0
@@ -111,7 +121,73 @@ var ResumeEducation = ({
                   {education.subjects && (
                     <div className="col-12 d-flex flex-wrap">
                       {education.subjects.map((subject) => (
-                        <Tag className="tag-text mb-2">{subject}</Tag>
+                        <Tag
+                          className="tag-text mb-2  px-2"
+                          style={{ fontSize: 14 }}
+                        >
+                          {subject}
+                        </Tag>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </Timeline.Item>
+            );
+          })}
+      </Timeline>
+    </div>
+  );
+};
+
+var ResumeEmployment = ({
+  employmentList,
+}: {
+  employmentList: UserResumeEmployment[];
+}) => {
+  const state = useSelector((state: any) => {
+    return { rootState: state.rootActionReducer };
+  });
+  const { isDark } = state.rootState;
+  return (
+    <div className="resume-e-container mt-4">
+      <p
+        className={classNames("resume-title  pt-3")}
+        style={
+          isDark
+            ? { color: "rgba(255,255,255, 0.8)" }
+            : { color: "rgba(0,0,0,0.8" }
+        }
+      >
+        Employment
+      </p>
+      <Timeline className="col-12 col-md-10 col-lg-8">
+        {employmentList &&
+          employmentList.map((employment) => {
+            return (
+              <Timeline.Item className="col-12">
+                <div className="col-12 ">
+                  <p
+                    className="text-primary fw-bold col-12 mb-0"
+                    style={{ fontSize: 16 }}
+                  >
+                    {employment.position_title}
+                  </p>
+                  <p className="col-12 mb-0" style={{ fontSize: 14 }}>
+                    @{employment.company_name}
+                  </p>
+                  <p className="col-12 mb-2" style={{ fontSize: 14 }}>
+                    {`${employment.start_month} ${employment.start_year} - ${employment.end_month}`}
+                  </p>
+
+                  {employment.tech_stack && (
+                    <div className="col-12 d-flex flex-wrap">
+                      {employment.tech_stack.map((tech) => (
+                        <Tag
+                          className="tag-text mb-2  px-2"
+                          style={{ fontSize: 14 }}
+                        >
+                          {tech}
+                        </Tag>
                       ))}
                     </div>
                   )}
