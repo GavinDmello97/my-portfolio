@@ -1,16 +1,16 @@
 import classNames from "classnames";
-import { Button, Tag, Timeline } from "antd";
+import { Button, Progress, Tag, Timeline } from "antd";
 import Generic from "../../components/generic/Generic";
 import {
   UserResume,
   UserResumeEducation,
   UserResumeEmployment,
+  UserResumeSkill,
 } from "../../config/types";
-import { useState, useRef, MutableRefObject } from "react";
+import { useState, useRef, MutableRefObject, useEffect } from "react";
 import useIntersection from "../../components/generic/useIntersection";
 import { AnimationControls, motion, useAnimation } from "framer-motion";
 import { useSelector } from "react-redux";
-import ReactQuill from "react-quill";
 
 type ProfileAboutType = {
   resume: UserResume;
@@ -22,7 +22,7 @@ const ProfileResume = ({ resume, className = "" }: ProfileAboutType) => {
   const ref = useRef<null | HTMLDivElement>(null);
   const inViewport = useIntersection(
     ref as MutableRefObject<HTMLDivElement>,
-    "0px"
+    "-100px"
   ); // Trigger as soon as the element becomes visible
   const controls = useAnimation();
 
@@ -43,7 +43,7 @@ const ProfileResume = ({ resume, className = "" }: ProfileAboutType) => {
           <motion.div
             initial={{ opacity: 0, transform: "translateY(300px)" }}
             animate={controls}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
           >
             {bio && bio.length > 0 && <ResumeBio text={bio} />}
             {education && education.length > 0 && (
@@ -53,9 +53,9 @@ const ProfileResume = ({ resume, className = "" }: ProfileAboutType) => {
             {employment && employment.length > 0 && (
               <ResumeEmployment employmentList={employment} />
             )}
+            {skills && skills.length > 0 && <ResumeSkills skills={skills} />}
           </motion.div>
         )}
-        {/* {education && education.length > 0 && } */}
       </div>
       <hr className="mb-0"></hr>
     </div>
@@ -64,6 +64,51 @@ const ProfileResume = ({ resume, className = "" }: ProfileAboutType) => {
 
 var ResumeBio = ({ text }: { text: string }) => {
   return <p className="col-12 py-3">{text}</p>;
+};
+
+var ResumeSkills = ({ skills }: { skills: UserResumeSkill[] }) => {
+  const [isInViewport, setViewStatus] = useState(false);
+  const ref = useRef<null | HTMLDivElement>(null);
+  const inViewport = useIntersection(
+    ref as MutableRefObject<HTMLDivElement>,
+    "-100px"
+  ); // Trigger as soon as the element becomes visible
+  const controls = useAnimation();
+
+  if (inViewport && !isInViewport) {
+    setViewStatus(true);
+    // controls.start({ opacity: 1, transform: "translateY(0px)" });
+  }
+  const state = useSelector((state: any) => {
+    return { rootState: state.rootActionReducer };
+  });
+  const { isDark } = state.rootState;
+  return (
+    <div className="resume-e-container" ref={ref}>
+      <p
+        className={classNames("resume-title py-2 pt-3")}
+        style={
+          isDark
+            ? { color: "rgba(255,255,255, 0.8)" }
+            : { color: "rgba(0,0,0,0.6)" }
+        }
+      >
+        S K I L L
+      </p>
+      <div className="col-12 d-flex flex-wrap">
+        {skills &&
+          skills.map((skill) => (
+            <div className="col-12 col-md-6 px-2 px-md-0 px-md-4">
+              <Generic.CustomProgressBar
+                percent={skill.percentage}
+                play={isInViewport}
+                label={skill.skill_name}
+              />
+            </div>
+          ))}
+      </div>
+    </div>
+  );
 };
 
 var ResumeEducation = ({
@@ -78,11 +123,11 @@ var ResumeEducation = ({
   return (
     <div className="resume-e-container">
       <p
-        className={classNames("resume-title pt-3")}
+        className={classNames("resume-title  py-2 pt-3")}
         style={
           isDark
             ? { color: "rgba(255,255,255, 0.8)" }
-            : { color: "rgba(0,0,0,0.8" }
+            : { color: "rgba(0,0,0,0.6)" }
         }
       >
         Education
@@ -149,13 +194,13 @@ var ResumeEmployment = ({
   });
   const { isDark } = state.rootState;
   return (
-    <div className="resume-e-container mt-4">
+    <div className="resume-e-container ">
       <p
-        className={classNames("resume-title  pt-3")}
+        className={classNames("resume-title  py-2 pt-3")}
         style={
           isDark
             ? { color: "rgba(255,255,255, 0.8)" }
-            : { color: "rgba(0,0,0,0.8" }
+            : { color: "rgba(0,0,0,0.6)" }
         }
       >
         Employment

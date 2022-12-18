@@ -28,7 +28,7 @@ export const USER: User = {
           the best practices in Product Development. Fast learner, hard worker and team player 
           who is proficient in an array of scripting languages and multimedia Web tools.`,
   resume: {
-    bio: "",
+    bio: "Skilled at writing well-designed testable and effecient code using the best practices in Product Development.",
     education: [
       {
         university_name: "University of Massachusetts, Dartmouth",
@@ -106,7 +106,18 @@ export const USER: User = {
         ],
       },
     ],
-    skills: [],
+    skills: [
+      { skill_name: "HTML", percentage: 95 },
+      { skill_name: "CSS", percentage: 90 },
+      { skill_name: "JavaScript", percentage: 80 },
+      { skill_name: "TypeScript", percentage: 90 },
+      { skill_name: "React", percentage: 80 },
+      { skill_name: "NodeJS", percentage: 75 },
+      { skill_name: "SQLite", percentage: 65 },
+      { skill_name: "NoSQL", percentage: 70 },
+      { skill_name: "MongoDB", percentage: 75 },
+      { skill_name: "GitHub", percentage: 90 },
+    ],
   },
   projects: null,
   blogs: null,

@@ -15,7 +15,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
   const ref = useRef<null | HTMLDivElement>(null);
   const inViewport = useIntersection(
     ref as MutableRefObject<HTMLDivElement>,
-    "0px"
+    "-100px"
   ); // Trigger as soon as the element becomes visible
   const controls = useAnimation();
 
@@ -48,10 +48,10 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         <Button
           shape="round"
           size={"large"}
-          className={classNames("button-style")}
+          className={classNames("button-style ")}
         >
           <i className="fa fa-download fa-md me-2 "></i>
-          Download CV
+          <span className="f-karla">Download CV</span>
         </Button>
       </div>
       <hr className="mb-0"></hr>
