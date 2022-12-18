@@ -69,7 +69,7 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
           {/* Profile Left Section */}
           <div className="col-12 col-md-5 col-lg-4 col-xl-3   d-flex px-3">
             <Image
-              className="container-fluid col-12 p-0 rounded-2   "
+              className="container-fluid col-12 p-0 rounded-2 px-5  px-md-0 "
               style={{
                 objectFit: "contain",
                 width: "100%",
@@ -83,7 +83,7 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
           <div className="col-12 col-md-7 col-lg-7 offset-xl-1 px-3  py-3 ">
             {/* Profile Full Name */}
             <FullName
-              className="personal-profile__name"
+              className="personal-profile__name text-center text-md-start"
               firstName={first_name}
               middleName={middle_name}
               lastName={last_name}
