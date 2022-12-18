@@ -58,7 +58,7 @@ const ProfileMenu = ({
               //   style={{ backgroundColor: "red" }}
             >
               <div
-                className="col-12 d-flex justify-content-center justify-content-md-start align-items-center  container-fluid"
+                className="col-12 d-flex justify-content-center justify-content-md-start align-items-center  container-fluid bg-common"
                 style={{ fontSize: 18, height: 40 }}
               >
                 <i className={classNames(menu.icon, "noselect ")} />

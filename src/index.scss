@@ -14,7 +14,9 @@
   p, i, span {
     background-color: transparent;
   }
-
+  .bg-common:active {
+    background-color: transparent;
+  }
 
   .menu-item:hover {
     color: white;
@@ -84,13 +86,15 @@
   
 }
 
-
 .menu-item:hover {
   color: black;
   i, span, div {
+
+    background-color: transparent;
     color: black;
   }
 }
+
 
 .menu-item:active {
   color: black;

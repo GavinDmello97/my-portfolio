@@ -28,7 +28,7 @@ export const USER: User = {
           the best practices in Product Development. Fast learner, hard worker and team player 
           who is proficient in an array of scripting languages and multimedia Web tools.`,
   resume: {
-    bio: "Hellaoiansdlsanldjnaskljdnlsandlaskndlsakndlknals dasdk nsakjnd kljasn kldjnasl knlasknd lkasndl knaslkdnlsa nlasn laksn ldknasl knsal nlans lasn lnasl nsal n",
+    bio: "",
     education: [
       {
         university_name: "University of Massachusetts, Dartmouth",
