@@ -104,6 +104,14 @@ const Profile = (props: any) => {
                 <ProfileResume resume={user.resume} />
               </div>
             )}
+
+            {/* User's Project */}
+            {user.resume && (
+              <div className="col-12" ref={references.projects}>
+                {/* <ProfileResume resume={user.resume} /> */}
+              </div>
+            )}
+
             <Button style={{ marginTop: 2000 }}>Xaas</Button>
             <p className="my-4">Dadttss</p>
           </div>
