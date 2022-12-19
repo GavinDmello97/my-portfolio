@@ -47,14 +47,25 @@ const Generic = {
       <div className="col-12 mb-3">
         <div className="col-12 d-flex justify-content-between">
           <span>{label}</span>
-          <span>{percent / 20}</span>
+          {/* <span>{percent / 25}</span> */}
         </div>
         <Progress
           percent={p}
           showInfo={false}
+          status="normal"
           strokeWidth={3}
+          strokeColor={"0069fd"}
           trailColor={isDark ? "#bbb" : ""}
         />
+        <div
+          className=" col-12 d-flex justify-content-between"
+          style={{ marginTop: -10 }}
+        >
+          <span style={{ fontSize: 10 }}>Beginner</span>
+          <span style={{ fontSize: 10 }}>Intermediate</span>
+          <span style={{ fontSize: 10 }}>Proficient</span>
+          <span style={{ fontSize: 10 }}>Expert</span>
+        </div>
       </div>
     );
   },

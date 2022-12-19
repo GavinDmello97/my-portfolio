@@ -112,8 +112,8 @@ const Profile = (props: any) => {
               </div>
             )}
 
-            <Button style={{ marginTop: 2000 }}>Xaas</Button>
-            <p className="my-4">Dadttss</p>
+            {/* <Button style={{ marginTop: 2000 }}>Xaas</Button>
+            <p className="my-4">Dadttss</p> */}
           </div>
         </div>
       </div>

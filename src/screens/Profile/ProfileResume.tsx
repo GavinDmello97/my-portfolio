@@ -233,7 +233,7 @@ var ResumeSkills = ({ skills }: { skills: UserResumeSkill[] }) => {
       <div className="col-12 d-flex flex-wrap">
         {skills &&
           (showMore ? skills : skills.slice(0, 6)).map((skill) => (
-            <div className="col-12 col-md-6 px-2 px-md-0 px-md-4">
+            <div className="col-12 col-md-6 px-2 px-md-3">
               <Generic.CustomProgressBar
                 percent={skill.percentage}
                 play={isInViewport}
