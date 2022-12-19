@@ -66,51 +66,6 @@ var ResumeBio = ({ text }: { text: string }) => {
   return <p className="col-12 py-3">{text}</p>;
 };
 
-var ResumeSkills = ({ skills }: { skills: UserResumeSkill[] }) => {
-  const [isInViewport, setViewStatus] = useState(false);
-  const ref = useRef<null | HTMLDivElement>(null);
-  const inViewport = useIntersection(
-    ref as MutableRefObject<HTMLDivElement>,
-    "-100px"
-  ); // Trigger as soon as the element becomes visible
-  const controls = useAnimation();
-
-  if (inViewport && !isInViewport) {
-    setViewStatus(true);
-    // controls.start({ opacity: 1, transform: "translateY(0px)" });
-  }
-  const state = useSelector((state: any) => {
-    return { rootState: state.rootActionReducer };
-  });
-  const { isDark } = state.rootState;
-  return (
-    <div className="resume-e-container" ref={ref}>
-      <p
-        className={classNames("resume-title py-2 pt-3")}
-        style={
-          isDark
-            ? { color: "rgba(255,255,255, 0.8)" }
-            : { color: "rgba(0,0,0,0.6)" }
-        }
-      >
-        S K I L L
-      </p>
-      <div className="col-12 d-flex flex-wrap">
-        {skills &&
-          skills.map((skill) => (
-            <div className="col-12 col-md-6 px-2 px-md-0 px-md-4">
-              <Generic.CustomProgressBar
-                percent={skill.percentage}
-                play={isInViewport}
-                label={skill.skill_name}
-              />
-            </div>
-          ))}
-      </div>
-    </div>
-  );
-};
-
 var ResumeEducation = ({
   educationList,
 }: {
@@ -241,6 +196,65 @@ var ResumeEmployment = ({
             );
           })}
       </Timeline>
+    </div>
+  );
+};
+
+var ResumeSkills = ({ skills }: { skills: UserResumeSkill[] }) => {
+  const [showMore, setShowMore] = useState(false);
+  const [isInViewport, setViewStatus] = useState(false);
+
+  const ref = useRef<null | HTMLDivElement>(null);
+  const inViewport = useIntersection(
+    ref as MutableRefObject<HTMLDivElement>,
+    "-100px"
+  ); // Trigger as soon as the element becomes visible
+
+  if (inViewport && !isInViewport) {
+    setViewStatus(true);
+    // controls.start({ opacity: 1, transform: "translateY(0px)" });
+  }
+  const state = useSelector((state: any) => {
+    return { rootState: state.rootActionReducer };
+  });
+  const { isDark } = state.rootState;
+  return (
+    <div className="resume-e-container" ref={ref}>
+      <p
+        className={classNames("resume-title py-2 pt-3")}
+        style={
+          isDark
+            ? { color: "rgba(255,255,255, 0.8)" }
+            : { color: "rgba(0,0,0,0.6)" }
+        }
+      >
+        Skills
+      </p>
+      <div className="col-12 d-flex flex-wrap">
+        {skills &&
+          (showMore ? skills : skills.slice(0, 6)).map((skill) => (
+            <div className="col-12 col-md-6 px-2 px-md-0 px-md-4">
+              <Generic.CustomProgressBar
+                percent={skill.percentage}
+                play={isInViewport}
+                label={skill.skill_name}
+                isDark={isDark}
+              />
+            </div>
+          ))}
+        {skills.length > 6 && (
+          <div className="col-12 d-flex flex-column justify-content-center align-items-center">
+            <Button
+              className={classNames("button-style ")}
+              onClick={() => {
+                setShowMore(!showMore);
+              }}
+            >
+              <span>{showMore ? "Show less" : "Show more"}</span>
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -28,10 +28,12 @@ const Generic = {
     percent,
     play,
     label,
+    isDark,
   }: {
     percent: number;
     play: boolean;
     label: string;
+    isDark: boolean;
   }) => {
     const [p, setP] = useState(0);
     useEffect(() => {
@@ -47,7 +49,12 @@ const Generic = {
           <span>{label}</span>
           <span>{percent / 20}</span>
         </div>
-        <Progress percent={p} showInfo={false} strokeWidth={3} />
+        <Progress
+          percent={p}
+          showInfo={false}
+          strokeWidth={3}
+          trailColor={isDark ? "#bbb" : ""}
+        />
       </div>
     );
   },

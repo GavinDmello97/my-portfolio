@@ -40,7 +40,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         <motion.div
           initial={{ opacity: 0, transform: "translateX(300px)" }}
           animate={controls}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
           <p className="col-12 py-3">{aboutMe}</p>
         </motion.div>
