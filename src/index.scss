@@ -60,7 +60,6 @@
   .animated-text {
     color:white;
     font-family: 'Roboto Mono', monospace;
-
   }
 
   .resume-e-container {
@@ -129,11 +128,11 @@
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  // look for type animation from github repo old histroy
   animation: type 6s steps(60, end);  
   font-weight: 600;
   color:rgb(123, 123, 123);
   font-family: 'Roboto Mono', monospace;
-
 }
 
 .resume-e-container {

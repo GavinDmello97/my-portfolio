@@ -163,7 +163,7 @@ export const USER: User = {
       project_name: "My Portfolio",
       project_description:
         "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
-      banner_picture: "",
+      banner_picture: require(`../assets/images/delete_later/myportfolio.jpeg`),
       tech_stack: [
         "React.js",
         "SASS",
@@ -172,6 +172,29 @@ export const USER: User = {
         "TypeScript",
       ],
       code_link: "https://github.com/GavinDmello97/my-portfolio",
+      project_link: "github.io/my-portfolio/",
+    },
+
+    {
+      project_name: "Blogica",
+      project_description:
+        "Blogica is a mobile-responsive web application, that acts as a platform where you can interact with and read articles published by article writers. Explore thousands of articles based on Culture and Civilization, Defence and Security, Science and Technology, Stories, Essays and other similar categories today.",
+      banner_picture: require(`../assets/images/delete_later/blogica.png`),
+
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Express.js",
+        "TypeScript",
+        "NoSQL Database",
+        "Heroku",
+        "Mongo Atlas",
+        "Cloud Messaging",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
     },
   ],
   blogs: null,

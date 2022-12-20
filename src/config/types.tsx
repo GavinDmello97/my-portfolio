@@ -65,7 +65,7 @@ export type SocialLinks = {
 
 export type UserProject = {
   project_name: string;
-  project_description: string;
+  project_description?: string;
   banner_picture: string;
   tech_stack: string[];
   code_link?: string;

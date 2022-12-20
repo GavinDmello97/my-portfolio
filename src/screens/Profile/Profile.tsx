@@ -106,15 +106,8 @@ const Profile = (props: any) => {
               </div>
             )}
 
-            {/* User's Project */}
-            {user.projects && (
-              <div className="col-12" ref={references.projects}>
-                <ProfileProjects projects={user.projects} />
-              </div>
-            )}
-
-            {/* <Button style={{ marginTop: 2000 }}>Xaas</Button>
-            <p className="my-4">Dadttss</p> */}
+            <Button style={{ marginTop: 2000 }}>Xaas</Button>
+            <p className="my-4">Dadttss</p>
           </div>
         </div>
       </div>
@@ -125,8 +118,17 @@ const Profile = (props: any) => {
 };
 
 const ScreenLoader = ({ message }: { message?: string }) => {
+  const state = useSelector((state: any) => {
+    return { rootState: state.rootActionReducer };
+  });
+  const { isDark } = state.rootState;
   return (
-    <div className="w-100 h-100 d-flex justify-content-center align-items-center flex-1  ">
+    <div
+      className={classNames(
+        "w-100 h-100 d-flex justify-content-center align-items-center flex-1  ",
+        isDark ? "dark-theme" : ""
+      )}
+    >
       <Spin tip={message || "Loading"} />
     </div>
   );
