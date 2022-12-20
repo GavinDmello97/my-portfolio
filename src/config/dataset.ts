@@ -61,6 +61,43 @@ export const USER: User = {
     ],
     employment: [
       {
+        position_title:
+          "Graduate Mentor for Courseworks - Paradigmatic Software and Data Visualization",
+        company_name: "University of Massachusetts, Dartmouth",
+        start_month: "Sep",
+        start_year: "2022",
+        end_month: "Dec",
+        end_year: "2022",
+        job_description: "",
+        tech_stack: [
+          "D3.js",
+          "Maps.js",
+          "JavaScript",
+          "Python/PY notebook",
+          "CSS3",
+          "Graphs & Maps",
+          "Code Testing & Evaluation",
+        ],
+      },
+      {
+        position_title:
+          "Graduate Mentor for Courseworks - Models of Computation and Data Visualization",
+        company_name: "University of Massachusetts, Dartmouth",
+        start_month: "Feb",
+        start_year: "2022",
+        end_month: "May",
+        end_year: "2022",
+        job_description: "",
+        tech_stack: [
+          "D3.js",
+          "Shell Scripting",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "GitHub",
+        ],
+      },
+      {
         position_title: "Mobile Engineer",
         company_name: "GetSetUp",
         start_month: "Mar",
@@ -117,8 +154,25 @@ export const USER: User = {
       { skill_name: "NoSQL", percentage: 70 },
       { skill_name: "MongoDB", percentage: 70 },
       { skill_name: "GitHub", percentage: 100 },
+      { skill_name: "Code Testing & Evaluation", percentage: 70 },
+      { skill_name: "CI/CD automation", percentage: 40 },
     ],
   },
-  projects: null,
+  projects: [
+    {
+      project_name: "My Portfolio",
+      project_description:
+        "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
+      banner_picture: "",
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Motion-Animations",
+        "TypeScript",
+      ],
+      code_link: "https://github.com/GavinDmello97/my-portfolio",
+    },
+  ],
   blogs: null,
 };

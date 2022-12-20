@@ -89,9 +89,9 @@ var ResumeEducation = ({
       </p>
       <Timeline className="col-12 col-md-10 col-lg-8">
         {educationList &&
-          educationList.map((education) => {
+          educationList.map((education, index) => {
             return (
-              <Timeline.Item className="col-12">
+              <Timeline.Item className="col-12" key={index}>
                 <div className="col-12 ">
                   <p
                     className="text-primary fw-bold col-12 mb-0"

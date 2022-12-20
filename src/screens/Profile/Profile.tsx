@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import ProfileResume from "./ProfileResume";
 import { USER } from "../../config/dataset";
 import ProfileMenu from "./ProfileMenu";
+import ProfileProjects from "./ProfileProjects";
 
 const Profile = (props: any) => {
   const references = {
@@ -106,9 +107,9 @@ const Profile = (props: any) => {
             )}
 
             {/* User's Project */}
-            {user.resume && (
+            {user.projects && (
               <div className="col-12" ref={references.projects}>
-                {/* <ProfileResume resume={user.resume} /> */}
+                <ProfileProjects projects={user.projects} />
               </div>
             )}
 

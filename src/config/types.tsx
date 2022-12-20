@@ -1,11 +1,11 @@
-import { MenuProps } from "antd";
+import { Descriptions, MenuProps } from "antd";
 
 export type User = {
   profile: UserProfile;
   about: string | null;
   resume: UserResume | null;
-  projects: Project[] | null;
-  blogs: Blog[] | null;
+  projects: UserProject[] | null;
+  blogs: UserBlog[] | null;
 };
 
 export type UserProfile = {
@@ -63,8 +63,15 @@ export type SocialLinks = {
   stack_overflow: string;
 };
 
-export type Project = {};
+export type UserProject = {
+  project_name: string;
+  project_description: string;
+  banner_picture: string;
+  tech_stack: string[];
+  code_link?: string;
+  project_link?: string;
+};
 
-export type Blog = {};
+export type UserBlog = {};
 
 export type MenuItem = Required<MenuProps>["items"][number];
