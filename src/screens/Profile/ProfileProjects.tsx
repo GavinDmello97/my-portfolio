@@ -66,8 +66,8 @@ const ProfileProjects = ({ projects, className = "" }: ProfileProjectType) => {
   };
 
   return (
-    <div className={classNames("col-10 px-3  profile-about", className)}>
-      <div className="col-12 container py-5" ref={ref}>
+    <div className={classNames("col-10 px-3 profile-about", className)}>
+      <div className="col-12 container  py-5" ref={ref}>
         <Generic.AnimatedText
           text={"Projects"}
           viewPortVisible={isInViewport}
@@ -146,7 +146,7 @@ var Projects = ({ projectList }: { projectList: UserProject[] }) => {
       {/* Project container */}
       <div className="flex-1 d-flex flex-row flex-wrap align-items-stretch">
         {filterProjects(projectList, activeTab).map((project, index) => (
-          <div className="p-0 py-3 p-md-3 col-12 col-sm-6 col-lg-4 flex-1">
+          <div className=" pt-3 pb-0 px-md-2 col-12 col-sm-6 col-lg-4 flex-1">
             <ProjectCard key={index} project={project} />
           </div>
         ))}
@@ -205,7 +205,10 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
                 shape="round"
                 className={classNames("button-style w-100 text-wrap  h-100 ")}
               >
-                <span>{"Project (live)"}</span>
+                <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
+                <span className="d-block d-sm-none d-xl-block">
+                  {"Project (live)"}
+                </span>
               </Button>
             </CardLink>
             <CardLink
@@ -218,7 +221,10 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
                   "button-style custom-button-style w-100 text-wrap  h-100"
                 )}
               >
-                <span>{"Source Code"}</span>
+                <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" />
+                <span className="d-block d-sm-none d-xl-block">
+                  {"Source Code"}
+                </span>
               </Button>
             </CardLink>
           </div>

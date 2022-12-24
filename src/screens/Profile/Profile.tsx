@@ -91,11 +91,7 @@ const Profile = (props: any) => {
               : "1px solid rgba(200, 200,200,0.4)",
           }}
         >
-          <ProfileMenu
-            references={references}
-            // viewPortListeners={viewPortListeners}
-            navMenu={menuItems}
-          />
+          <ProfileMenu references={references} navMenu={menuItems} />
         </div>
 
         {/* Body(right) container */}

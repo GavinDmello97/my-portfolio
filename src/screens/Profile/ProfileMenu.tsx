@@ -35,13 +35,14 @@ const ProfileMenu = ({
             <Menu.Item
               key={menu.key}
               className=" col-12 px-1 container menu-item"
-              onClick={() =>
+              onClick={() => {
+                console.log(references[menu.key]);
                 references[menu.key].current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                   inline: "nearest",
-                })
-              }
+                });
+              }}
               //   style={{ backgroundColor: "red" }}
             >
               <div
