@@ -244,7 +244,15 @@ export const USER: User = {
     {
       provider_first_name: "Deepak",
       provider_last_name: "Singh",
+      provider_position: "Engineering Lead",
+
       provider_message: `Gavin is undoubtedly an excellent engineer. He was a good team member while we worked closely at Zaya. I particularly appreciated his incredible attention to detail, enduring emphasis on quality, and always attempting a pixel perfect UI be it webapp or mobile app.\nHe is also a great communicator, able to explain topics clearly and concisely, as well as being able to debate his viewpoints calmly and objectively.`,
+    },
+    {
+      provider_first_name: "Pritesh",
+      provider_last_name: "Pereira",
+      provider_position: "Technical Lead",
+      provider_message: `Gavin is someone who is able to effectively learn new programming concepts and technologies and apply them in a practical setting. He has strong foundation in computer science and able to write clean, efficient, and well-documented code. In addition, he's great team player, able to communicate effectively with both technical and non-technical colleagues, and very proactive in seeking out opportunities to learn and improve his skills. I found him very proficient at troubleshooting and debuging code and has exhibited great ability to work independently on assigned tasks. I've no doubts that Gavin is going to be great addition to any technology team in the future.`,
     },
   ],
   blogs: null,

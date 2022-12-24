@@ -13,6 +13,7 @@ export type UserTestimony = {
   provider_first_name: string;
   provider_last_name: string;
   provider_message: string;
+  provider_position: string;
 };
 
 export type UserProfile = {

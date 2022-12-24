@@ -24,18 +24,36 @@
     font: 1.1em sans-serif;
 }
 
+.slick-dots {
+    background-color: transparent;
+    li {
+        background-color:rgba(74,76,179,.35);
+       
+    }
+    
+
+    
+   
+   
+}
+
+
+
 
 .personal-profile {
     font-family: 'Karla', sans-serif;
     color: #fff;
     padding-top: 90px;
+    background-color: transparent;
 
-    b, span, a, div  {
+    b, span, a, div, em  {
         font-family: 'Karla', sans-serif;
         font-size: 16px;
         line-height: 24px;
         color: #fff;
         text-align: start;
+        background-color: transparent;
+
     }
 
     span {
