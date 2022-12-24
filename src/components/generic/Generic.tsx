@@ -69,6 +69,22 @@ const Generic = {
       </div>
     );
   },
+  GradientBackground: ({ bgImageUrl }: { bgImageUrl: string }) => {
+    return (
+      <div
+        className="position-absolute w-100 h-100"
+        style={{
+          backgroundImage: `url(${bgImageUrl})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          flex: 1,
+          zIndex: 0,
+        }}
+      >
+        <div className=" w-100 h-100 header-cover"></div>
+      </div>
+    );
+  },
 };
 
 export default Generic;

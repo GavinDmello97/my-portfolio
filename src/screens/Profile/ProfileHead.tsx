@@ -5,6 +5,7 @@ import { Image } from "antd";
 import { User, UserProfile } from "../../config/types";
 import { CSSModule } from "reactstrap/types/lib/utils";
 import { formattingPhone } from "../../config/utils";
+import Generic from "../../components/generic/Generic";
 type ProfileInfoType = {
   containerClassName: string;
   title: string;
@@ -50,20 +51,13 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
   return (
     <div className="d-flex col-12 position-relative">
       {/* Background Image and Tint(Gradient) */}
-      <div
-        className="position-absolute w-100 h-100"
-        style={{
-          backgroundImage: `url(${"https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8b2ZmaWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80"})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          flex: 1,
-          zIndex: 0,
-        }}
-      >
-        <div className=" w-100 h-100 header-cover"></div>
-      </div>
+      <Generic.GradientBackground
+        bgImageUrl={
+          "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8b2ZmaWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80"
+        }
+      />
       {/* Foreground Content Container */}
-      <div className="container " style={{ zIndex: 400 }}>
+      <div className="container ">
         {/* Profile Content Container */}
         <div className=" personal-profile  col-12 d-flex flex-column flex-md-row py-5 align-items-center ">
           {/* Profile Left Section */}

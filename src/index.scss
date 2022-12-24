@@ -41,12 +41,26 @@
     }
   }
 
+ .project-card {
+  i, span, p, div, a {
+    background-color: transparent;
+  }
+ }
+
   
   .button-style:hover {
     background-color: #3B71CA;
+    border-width: 0;
     i,span {
       color:white
     } 
+  }
+
+  .custom-button-style:hover  {
+    background-color:#d1017e;
+    border-color: #d1017e;
+    border-width: 0;
+    border-inline-color: #d1017e ;
   }
 
   .button-style {
@@ -112,10 +126,18 @@
 
 .button-style:hover {
   background-color: #3B71CA;
+  border-width: 0;
   i,span {
     color:white
   }
   
+}
+
+.custom-button-style:hover  {
+  background-color:#d1017e;
+  border-color: #d1017e;
+  border-width: 0;
+  border-inline-color: #d1017e ;
 }
 
 .button-style {

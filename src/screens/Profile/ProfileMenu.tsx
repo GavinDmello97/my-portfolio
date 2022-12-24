@@ -17,16 +17,6 @@ const ProfileMenu = ({
     return { rootState: state.rootActionReducer };
   });
   const { isDark } = state.rootState;
-  //   const [activeButton, setActiveButton] = useState("profile");
-  //   const { profile, about, resume, projects, blogs } = viewPortListeners;
-
-  //   console.log("viewPortListeners", viewPortListeners);
-
-  //   if (profile) {
-  //     setActiveButton("profile");
-  //   } else if (about) {
-  //     setActiveButton("about");
-  //   }
 
   return (
     <div className=" sticky-top flex-1 d-flex flex-column justify-content-start align-items-start  ">
@@ -36,12 +26,9 @@ const ProfileMenu = ({
       </div>
       <Menu
         defaultSelectedKeys={["profile"]}
-        // selectedKeys={[activeButton]}
         mode="inline"
         theme={isDark ? "dark" : "light"}
         style={{ flex: 1 }}
-
-        // inlineCollapsed={collapsed}
       >
         {navMenu.map((menu) => {
           return (

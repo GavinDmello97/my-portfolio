@@ -173,6 +173,7 @@ export const USER: User = {
       ],
       code_link: "https://github.com/GavinDmello97/my-portfolio",
       project_link: "github.io/my-portfolio/",
+      type: "website",
     },
 
     {
@@ -195,6 +196,55 @@ export const USER: User = {
       code_link:
         "https://github.com/GavinDmello97/Masters_project/implementation",
       project_link: "github.io/blocica/",
+      type: "website",
+    },
+    {
+      project_name: "Recipe Diary",
+      project_description:
+        "Recipe Diary is an online recipe registry application where one can share new recipes as well as browse from a large collection of existing recipes added by other users to cook something delicious. Having a craving for food or about to be visited by guest, Recipe Diary is all you need! Happy Cooking!",
+      banner_picture: require(`../assets/images/delete_later/recipediary.png`),
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Express.js",
+        "SQL Database",
+        "Animatable JS",
+        "Mongo DB + Atlas",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
+      type: "website",
+    },
+    {
+      project_name: "Dia Fit",
+      project_description:
+        "Dia fit is a mobile platform application for android and ios users to track your diet, use follow along excercises as well as excercise usage of other features such as BMI calculator and Fat Percentage calculator",
+      banner_picture:
+        "https://i.pinimg.com/736x/2c/f0/3a/2cf03abcf226439e4608d5081f897675.jpg",
+
+      tech_stack: [
+        "React-Native",
+        "SASS",
+        "GitHub",
+        "Redux",
+        "Animatable",
+        "REST APIs",
+        "Axios",
+        "CI/CD",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
+      type: "mobile",
+    },
+  ],
+  testimonies: [
+    {
+      provider_first_name: "Deepak",
+      provider_last_name: "Singh",
+      provider_message: `Gavin is undoubtedly an excellent engineer. He was a good team member while we worked closely at Zaya. I particularly appreciated his incredible attention to detail, enduring emphasis on quality, and always attempting a pixel perfect UI be it webapp or mobile app.\nHe is also a great communicator, able to explain topics clearly and concisely, as well as being able to debate his viewpoints calmly and objectively.`,
     },
   ],
   blogs: null,

@@ -245,7 +245,8 @@ var ResumeSkills = ({ skills }: { skills: UserResumeSkill[] }) => {
         {skills.length > 6 && (
           <div className="col-12 d-flex flex-column justify-content-center align-items-center">
             <Button
-              className={classNames("button-style ")}
+              shape="round"
+              className={classNames("button-style  ")}
               onClick={() => {
                 setShowMore(!showMore);
               }}

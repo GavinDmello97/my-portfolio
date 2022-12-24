@@ -4,22 +4,27 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./Profile.scss";
 import { dataObjects, randomColorGenerator } from "../../config/configuration";
 import ProfileHead from "./ProfileHead";
-import { User, MenuItem } from "../../config/types";
-import { Button, Divider, Menu, MenuProps, Space, Spin } from "antd";
+import { User, MenuItem, UserTestimony } from "../../config/types";
+import { Button, Carousel, Divider, Menu, MenuProps, Space, Spin } from "antd";
 import ProfileAbout from "./ProfileAbout";
 import classNames from "classnames";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProfileResume from "./ProfileResume";
 import { USER } from "../../config/dataset";
 import ProfileMenu from "./ProfileMenu";
 import ProfileProjects from "./ProfileProjects";
+import { setProjectTabs } from "../../redux/actionReducers/projectsOnDisplayReducer";
+import Generic from "../../components/generic/Generic";
+import ProfileTestimony from "./ProfileTestimony";
 
 const Profile = (props: any) => {
+  const dispatch = useDispatch();
   const references = {
     profile: useRef<null | HTMLDivElement>(null),
     about: useRef<null | HTMLDivElement>(null),
     resume: useRef<null | HTMLDivElement>(null),
     projects: useRef<null | HTMLDivElement>(null),
+    testimonies: useRef<null | HTMLDivElement>(null),
     blogs: useRef<null | HTMLDivElement>(null),
   };
 
@@ -31,6 +36,23 @@ const Profile = (props: any) => {
     setTimeout(() => {
       setLoading(false);
       setUser(USER);
+      if (USER.projects && USER.projects.length > 0)
+        dispatch(
+          setProjectTabs([
+            {
+              label: "All",
+              key: "all",
+            },
+            {
+              label: "Websites",
+              key: "website",
+            },
+            {
+              label: "Mobile Apps",
+              key: "mobile",
+            },
+          ])
+        );
     }, 2000);
   }, []);
 
@@ -103,6 +125,19 @@ const Profile = (props: any) => {
             {user.resume && (
               <div className="col-12" ref={references.resume}>
                 <ProfileResume resume={user.resume} />
+              </div>
+            )}
+
+            {/* User's Project */}
+            {user.projects && (
+              <div className="col-12" ref={references.projects}>
+                <ProfileProjects projects={user.projects} />
+              </div>
+            )}
+
+            {user.testimonies && (
+              <div className="col-12" ref={references.testimonies}>
+                <ProfileTestimony testimonies={user.testimonies} />
               </div>
             )}
 

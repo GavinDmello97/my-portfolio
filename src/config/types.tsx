@@ -5,7 +5,14 @@ export type User = {
   about: string | null;
   resume: UserResume | null;
   projects: UserProject[] | null;
+  testimonies: UserTestimony[] | null;
   blogs: UserBlog[] | null;
+};
+
+export type UserTestimony = {
+  provider_first_name: string;
+  provider_last_name: string;
+  provider_message: string;
 };
 
 export type UserProfile = {
@@ -70,8 +77,11 @@ export type UserProject = {
   tech_stack: string[];
   code_link?: string;
   project_link?: string;
+  type: string;
 };
 
 export type UserBlog = {};
 
 export type MenuItem = Required<MenuProps>["items"][number];
+
+export type ProjectTabs = MenuProps["items"] | null;
