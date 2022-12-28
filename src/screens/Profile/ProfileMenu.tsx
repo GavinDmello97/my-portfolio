@@ -17,52 +17,49 @@ const ProfileMenu = ({
     return { rootState: state.rootActionReducer };
   });
   const { isDark } = state.rootState;
-  //   const [activeButton, setActiveButton] = useState("profile");
-  //   const { profile, about, resume, projects, blogs } = viewPortListeners;
-
-  //   console.log("viewPortListeners", viewPortListeners);
-
-  //   if (profile) {
-  //     setActiveButton("profile");
-  //   } else if (about) {
-  //     setActiveButton("about");
-  //   }
 
   return (
     <div className=" sticky-top flex-1 d-flex flex-column justify-content-start align-items-start  ">
-      <div className=" bg-warning  w-100 p-3 text-center ">
-        <b className="bg-warning d-none d-md-block">SCROLL TO</b>
-        <i className="fa fa-map fa-lg d-block d-md-none" />
+      <div
+        className={`${
+          isDark ? "bg-warning" : "bg-warning"
+        } w-100 p-3 text-center `}
+      >
+        <b
+          className={`${
+            isDark ? "bg-warning" : "bg-warning"
+          } d-none d-lg-block text-white`}
+        >
+          SCROLL TO
+        </b>
+        <i className="fa fa-map fa-lg d-block d-lg-none" />
       </div>
       <Menu
         defaultSelectedKeys={["profile"]}
-        // selectedKeys={[activeButton]}
         mode="inline"
         theme={isDark ? "dark" : "light"}
         style={{ flex: 1 }}
-
-        // inlineCollapsed={collapsed}
       >
         {navMenu.map((menu) => {
           return (
             <Menu.Item
               key={menu.key}
               className=" col-12 px-1 container menu-item"
-              onClick={() =>
+              onClick={() => {
                 references[menu.key].current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                   inline: "nearest",
-                })
-              }
+                });
+              }}
               //   style={{ backgroundColor: "red" }}
             >
               <div
-                className="col-12 d-flex justify-content-center justify-content-md-start align-items-center  container-fluid bg-common"
+                className="col-12 d-flex justify-content-center justify-content-lg-start align-items-center  container-fluid bg-common"
                 style={{ fontSize: 18, height: 40 }}
               >
                 <i className={classNames(menu.icon, "noselect ")} />
-                <span className="d-none d-md-block ms-2 noselect  flex-wrap">
+                <span className="d-none d-lg-block ms-2 noselect  flex-wrap">
                   {menu.title}
                 </span>
               </div>

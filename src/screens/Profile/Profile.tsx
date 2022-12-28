@@ -4,21 +4,27 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./Profile.scss";
 import { dataObjects, randomColorGenerator } from "../../config/configuration";
 import ProfileHead from "./ProfileHead";
-import { User, MenuItem } from "../../config/types";
-import { Button, Divider, Menu, MenuProps, Space, Spin } from "antd";
+import { User, MenuItem, UserTestimony } from "../../config/types";
+import { Button, Carousel, Divider, Menu, MenuProps, Space, Spin } from "antd";
 import ProfileAbout from "./ProfileAbout";
 import classNames from "classnames";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProfileResume from "./ProfileResume";
 import { USER } from "../../config/dataset";
 import ProfileMenu from "./ProfileMenu";
+import ProfileProjects from "./ProfileProjects";
+import { setProjectTabs } from "../../redux/actionReducers/projectsOnDisplayReducer";
+import Generic from "../../components/generic/Generic";
+import ProfileTestimony from "./ProfileTestimony";
 
 const Profile = (props: any) => {
+  const dispatch = useDispatch();
   const references = {
     profile: useRef<null | HTMLDivElement>(null),
     about: useRef<null | HTMLDivElement>(null),
     resume: useRef<null | HTMLDivElement>(null),
     projects: useRef<null | HTMLDivElement>(null),
+    testimonies: useRef<null | HTMLDivElement>(null),
     blogs: useRef<null | HTMLDivElement>(null),
   };
 
@@ -30,6 +36,23 @@ const Profile = (props: any) => {
     setTimeout(() => {
       setLoading(false);
       setUser(USER);
+      if (USER.projects && USER.projects.length > 0)
+        dispatch(
+          setProjectTabs([
+            {
+              label: "All",
+              key: "all",
+            },
+            {
+              label: "Websites",
+              key: "website",
+            },
+            {
+              label: "Mobile Apps",
+              key: "mobile",
+            },
+          ])
+        );
     }, 2000);
   }, []);
 
@@ -58,7 +81,7 @@ const Profile = (props: any) => {
           className={classNames(
             "p-0  flex-1 d-flex flex-column ",
             menuItems.length > 0
-              ? "col-0 d-none col-sm-1 col-md-2 d-sm-block "
+              ? "col-0 d-none col-sm-1 col-lg-2 d-sm-block "
               : "col-0 d-none",
             isDark ? "dark-theme" : ""
           )}
@@ -68,18 +91,14 @@ const Profile = (props: any) => {
               : "1px solid rgba(200, 200,200,0.4)",
           }}
         >
-          <ProfileMenu
-            references={references}
-            // viewPortListeners={viewPortListeners}
-            navMenu={menuItems}
-          />
+          <ProfileMenu references={references} navMenu={menuItems} />
         </div>
 
         {/* Body(right) container */}
         <div
           className={classNames(
             "p-0 ",
-            menuItems.length > 0 ? "col-12 col-sm-11 col-md-10" : "col-12"
+            menuItems.length > 0 ? "col-12 col-sm-11 col-lg-10" : "col-12"
           )}
         >
           {/* User's profile */}
@@ -104,6 +123,26 @@ const Profile = (props: any) => {
                 <ProfileResume resume={user.resume} />
               </div>
             )}
+
+            {/* User's Project */}
+            {user.projects && (
+              <div className="col-12" ref={references.projects}>
+                <ProfileProjects projects={user.projects} />
+              </div>
+            )}
+
+            {user.testimonies && (
+              <div className="col-12" ref={references.testimonies}>
+                <ProfileTestimony testimonies={user.testimonies} />
+              </div>
+            )}
+
+            {user.blogs && (
+              <div className="col-12" ref={references.blogs}>
+                {/* <ProfileBlogs blogs={user.blogs} /> */}
+              </div>
+            )}
+
             <Button style={{ marginTop: 2000 }}>Xaas</Button>
             <p className="my-4">Dadttss</p>
           </div>
@@ -116,8 +155,17 @@ const Profile = (props: any) => {
 };
 
 const ScreenLoader = ({ message }: { message?: string }) => {
+  const state = useSelector((state: any) => {
+    return { rootState: state.rootActionReducer };
+  });
+  const { isDark } = state.rootState;
   return (
-    <div className="w-100 h-100 d-flex justify-content-center align-items-center flex-1  ">
+    <div
+      className={classNames(
+        "w-100 h-100 d-flex justify-content-center align-items-center flex-1  ",
+        isDark ? "dark-theme" : ""
+      )}
+    >
       <Spin tip={message || "Loading"} />
     </div>
   );

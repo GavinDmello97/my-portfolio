@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
 .header-cover {
     background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
     left: 0;
@@ -8,16 +8,52 @@
     z-index: 0;
 }
 
-.personal-profile {
+.f-roboto {
     font-family: 'Roboto Mono', monospace;
+    font-size: 16;
+}
+
+.f-lora {
+    font-family: 'Lora', serif;
+    font-size: 16;     
+}
+
+.f-karla {
+    font-family: 'Karla', sans-serif;
+    font-size: 3;
+    font: 1.1em sans-serif;
+}
+
+.slick-dots {
+    background-color: transparent;
+    li {
+        background-color:rgba(74,76,179,.35);
+       
+    }
+    
+
+    
+   
+   
+}
+
+
+
+
+.personal-profile {
+    font-family: 'Karla', sans-serif;
     color: #fff;
     padding-top: 90px;
+    background-color: transparent;
 
-    b, span, a, div  {
+    b, span, a, div, em  {
+        font-family: 'Karla', sans-serif;
         font-size: 16px;
         line-height: 24px;
         color: #fff;
         text-align: start;
+        background-color: transparent;
+
     }
 
     span {
@@ -34,9 +70,7 @@
         font-weight: 600;
     }
 
-
-  
-
+// aspect-ratio: 1;  
 
 }
 
@@ -45,6 +79,21 @@
 }
 
 
+.cardDescription .ql-container {
+    height: 6em;
+
+ .ql-editor {
+    padding: 0%;
+    font-size: 16px;
+    cursor: pointer;
+    height: 4.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+  }
+} 
 
 .link {
     opacity: 0.5;

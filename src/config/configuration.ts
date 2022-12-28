@@ -29,6 +29,12 @@ const dataObjects = {
       title: "Projects",
       scrollTo: "",
     },
+    testimonies: {
+      key: "testimonies",
+      icon: "fa fa-graduation-cap fa-lg",
+      title: "Testimonies",
+      scrollTo: "",
+    },
     blogs: {
       key: "blogs",
       icon: "fa fa-rss-square fa-lg",

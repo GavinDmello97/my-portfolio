@@ -5,7 +5,7 @@ export interface initialStateRoot {
 }
 
 const initialState: initialStateRoot = {
-  isDark: false,
+  isDark: true,
 };
 export const userSlice = createSlice({
   name: "root",

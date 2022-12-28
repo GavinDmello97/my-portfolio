@@ -28,13 +28,13 @@ export const USER: User = {
           the best practices in Product Development. Fast learner, hard worker and team player 
           who is proficient in an array of scripting languages and multimedia Web tools.`,
   resume: {
-    bio: "",
+    bio: "Skilled at writing well-designed testable and effecient code using the best practices in Product Development.",
     education: [
       {
         university_name: "University of Massachusetts, Dartmouth",
         start_year: "2021",
         end_year: "2023",
-        degree: "Masters degree",
+        degree: "Masters",
         specialization: "Computer Science",
         subjects: [
           "Web Development",
@@ -48,7 +48,7 @@ export const USER: User = {
         university_name: "University of Mumbai",
         start_year: "2015",
         end_year: "2019",
-        degree: "Bachelors degree",
+        degree: "Bachelors",
         specialization: "Computer Science and Engineering",
         subjects: [
           "Data Structures",
@@ -60,6 +60,43 @@ export const USER: User = {
       },
     ],
     employment: [
+      {
+        position_title:
+          "Graduate Mentor for Courseworks - Paradigmatic Software and Data Visualization",
+        company_name: "University of Massachusetts, Dartmouth",
+        start_month: "Sep",
+        start_year: "2022",
+        end_month: "Dec",
+        end_year: "2022",
+        job_description: "",
+        tech_stack: [
+          "D3.js",
+          "Maps.js",
+          "JavaScript",
+          "Python/PY notebook",
+          "CSS3",
+          "Graphs & Maps",
+          "Code Testing & Evaluation",
+        ],
+      },
+      {
+        position_title:
+          "Graduate Mentor for Courseworks - Models of Computation and Data Visualization",
+        company_name: "University of Massachusetts, Dartmouth",
+        start_month: "Feb",
+        start_year: "2022",
+        end_month: "May",
+        end_year: "2022",
+        job_description: "",
+        tech_stack: [
+          "D3.js",
+          "Shell Scripting",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "GitHub",
+        ],
+      },
       {
         position_title: "Mobile Engineer",
         company_name: "GetSetUp",
@@ -106,8 +143,118 @@ export const USER: User = {
         ],
       },
     ],
-    skills: [],
+    skills: [
+      { skill_name: "HTML", percentage: 100 },
+      { skill_name: "CSS", percentage: 70 },
+      { skill_name: "JavaScript", percentage: 70 },
+      { skill_name: "TypeScript", percentage: 70 },
+      { skill_name: "React", percentage: 70 },
+      { skill_name: "NodeJS", percentage: 40 },
+      { skill_name: "SQLite", percentage: 40 },
+      { skill_name: "NoSQL", percentage: 70 },
+      { skill_name: "MongoDB", percentage: 70 },
+      { skill_name: "GitHub", percentage: 100 },
+      { skill_name: "Code Testing & Evaluation", percentage: 70 },
+      { skill_name: "CI/CD automation", percentage: 40 },
+    ],
   },
-  projects: null,
+  projects: [
+    {
+      project_name: "My Portfolio",
+      project_description:
+        "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
+      thumbnail: require(`../assets/images/delete_later/myportfolio.jpeg`),
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Motion-Animations",
+        "TypeScript",
+      ],
+      code_link: "https://github.com/GavinDmello97/my-portfolio",
+      project_link: "github.io/my-portfolio/",
+      type: "website",
+    },
+
+    {
+      project_name: "Blogica",
+      project_description:
+        "Blogica is a mobile-responsive web application, that acts as a platform where you can interact with and read articles published by article writers. Explore thousands of articles based on Culture and Civilization, Defence and Security, Science and Technology, Stories, Essays and other similar categories today.",
+      thumbnail: require(`../assets/images/delete_later/blogica.png`),
+
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Express.js",
+        "TypeScript",
+        "NoSQL Database",
+        "Heroku",
+        "Mongo Atlas",
+        "Cloud Messaging",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
+      type: "website",
+    },
+    {
+      project_name: "Recipe Diary",
+      project_description:
+        "Recipe Diary is an online recipe registry application where one can share new recipes as well as browse from a large collection of existing recipes added by other users to cook something delicious. Having a craving for food or about to be visited by guest, Recipe Diary is all you need! Happy Cooking!",
+      thumbnail: require(`../assets/images/delete_later/recipediary.png`),
+      tech_stack: [
+        "React.js",
+        "SASS",
+        "GitHub",
+        "Express.js",
+        "SQL Database",
+        "Animatable JS",
+        "Mongo DB + Atlas",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
+      type: "website",
+    },
+    {
+      project_name: "Dia Fit",
+      project_description:
+        "Dia fit is a mobile platform application for android and ios users to track your diet, use follow along excercises as well as excercise usage of other features such as BMI calculator and Fat Percentage calculator",
+      thumbnail:
+        "https://i.pinimg.com/736x/2c/f0/3a/2cf03abcf226439e4608d5081f897675.jpg",
+
+      tech_stack: [
+        "React-Native",
+        "SASS",
+        "GitHub",
+        "Redux",
+        "Animatable",
+        "REST APIs",
+        "Axios",
+        "CI/CD",
+      ],
+      code_link:
+        "https://github.com/GavinDmello97/Masters_project/implementation",
+      project_link: "github.io/blocica/",
+      type: "mobile",
+    },
+  ],
+  testimonies: [
+    {
+      provider_first_name: "Deepak",
+      provider_last_name: "Singh",
+      provider_position: "Engineering Lead",
+      provider_message: `Gavin is undoubtedly an excellent engineer. He was a good team member while we worked closely at Zaya. I particularly appreciated his incredible attention to detail, enduring emphasis on quality, and always attempting a pixel perfect UI be it webapp or mobile app.\nHe is also a great communicator, able to explain topics clearly and concisely, as well as being able to debate his viewpoints calmly and objectively.`,
+      provider_company_name: "Zaya Learning Labs",
+    },
+    {
+      provider_first_name: "Pritesh",
+      provider_last_name: "Pereira",
+      provider_position: "Technical Lead",
+      provider_message: `Gavin is someone who is able to effectively learn new programming concepts and technologies and apply them in a practical setting. He has strong foundation in computer science and able to write clean, efficient, and well-documented code. In addition, he's great team player, able to communicate effectively with both technical and non-technical colleagues, and very proactive in seeking out opportunities to learn and improve his skills. I found him very proficient at troubleshooting and debuging code and has exhibited great ability to work independently on assigned tasks.`,
+      provider_company_name: "GetSetUp",
+    },
+  ],
   blogs: null,
 };

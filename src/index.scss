@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap');
 
 
 .dark-theme {
@@ -42,12 +41,26 @@
     }
   }
 
+ .project-card {
+  i, span, p, div, a {
+    background-color: transparent;
+  }
+ }
+
   
   .button-style:hover {
     background-color: #3B71CA;
+    border-width: 0;
     i,span {
       color:white
     } 
+  }
+
+  .custom-button-style:hover  {
+    background-color:#d1017e;
+    border-color: #d1017e;
+    border-width: 0;
+    border-inline-color: #d1017e ;
   }
 
   .button-style {
@@ -59,13 +72,14 @@
   }
 
   .animated-text {
-    color:white
+    color:white;
+    font-family: 'Roboto Mono', monospace;
   }
 
   .resume-e-container {
     .resume-title {
-        font-family:'Courier New', Courier, monospace;   
-        font-size: 18;     
+      font-family: 'Roboto Mono', monospace;
+      font-size: 18;     
     }
     span, p { 
         color: rgba(255,255,255,0.5) 
@@ -112,10 +126,18 @@
 
 .button-style:hover {
   background-color: #3B71CA;
+  border-width: 0;
   i,span {
     color:white
   }
   
+}
+
+.custom-button-style:hover  {
+  background-color:#d1017e;
+  border-color: #d1017e;
+  border-width: 0;
+  border-inline-color: #d1017e ;
 }
 
 .button-style {
@@ -128,9 +150,11 @@
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  // look for type animation from github repo old histroy
   animation: type 6s steps(60, end);  
   font-weight: 600;
-  color:rgb(123, 123, 123)
+  color:rgb(123, 123, 123);
+  font-family: 'Roboto Mono', monospace;
 }
 
 .resume-e-container {
@@ -140,9 +164,8 @@
 
 }
   .resume-title {
-      font-family:'Courier New', Courier, monospace; 
-      font-size: 24;     
-       
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24;        
   }
   
 
@@ -157,12 +180,9 @@
   }
 
   .ant-timeline-item-last {
-    padding-bottom: 0
+    // padding-bottom: 0
   }
 }
-
-
-
 
 
 * {
@@ -184,3 +204,6 @@
   }
 }
 
+@keyframes type{ 
+  from { width: 0; } 
+} 
