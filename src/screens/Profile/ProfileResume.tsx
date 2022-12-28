@@ -118,26 +118,20 @@ var ResumeEducation = ({
                     )}
                   </p>
 
-                  {education.subjects && (
-                    <div className="col-12">
-                      <p
-                        className={`${
-                          isDark ? "text-white" : "text-secondary"
-                        } mb-1 mt-2`}
-                      >
-                        ✦ Relevant Coursework ✦
-                      </p>
-                      <div className="col-12 d-flex flex-wrap">
-                        {education.subjects.map((subject) => (
-                          <Tag
-                            className="tag-text mb-2  px-2"
-                            style={{ fontSize: 14 }}
-                          >
-                            {subject}
-                          </Tag>
-                        ))}
-                      </div>
-                    </div>
+                  {education.subjects && education.subjects.length > 0 && (
+                    <Generic.TagList
+                      taglist={education.subjects}
+                      tagClassName={classNames(
+                        `tag-text mb-2  px-2 ${
+                          isDark ? "text-white " : "text-dark"
+                        } font-14`
+                      )}
+                      listTitle={"✦ Relevant Coursework ✦"}
+                      listTitleClassName={`${
+                        isDark ? "text-white" : "text-secondary"
+                      } mb-1 mt-2`}
+                      tagContainerClassName={"bg-transparent"}
+                    />
                   )}
                 </div>
               </Timeline.Item>
@@ -189,27 +183,19 @@ var ResumeEmployment = ({
                     {`${employment.start_month} ${employment.start_year} - ${employment.end_month} ${employment.end_year}`}
                   </p>
 
-                  <p
-                    className={`${
+                  <Generic.TagList
+                    taglist={employment.tech_stack}
+                    tagClassName={classNames(
+                      `tag-text mb-2  px-2 ${
+                        isDark ? "text-white " : "text-dark"
+                      } font-14`
+                    )}
+                    listTitle={"✦ Tech Stack ✦"}
+                    listTitleClassName={`${
                       isDark ? "text-white" : "text-secondary"
                     } mb-1 mt-2`}
-                  >
-                    ✦ Tech Stack ✦
-                  </p>
-                  {employment.tech_stack && (
-                    <div className="col-12 d-flex flex-wrap bg-transparent">
-                      {employment.tech_stack.map((tech) => (
-                        <Tag
-                          className={`tag-text mb-2  px-2 ${
-                            isDark ? "text-white " : "text-dark"
-                          } `}
-                          style={{ fontSize: 14 }}
-                        >
-                          {tech}
-                        </Tag>
-                      ))}
-                    </div>
-                  )}
+                    tagContainerClassName={"bg-transparent"}
+                  />
                 </div>
               </Timeline.Item>
             );

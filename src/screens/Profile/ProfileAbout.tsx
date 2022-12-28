@@ -75,10 +75,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
               indicator={
                 <LoadingOutlined
                   spin
-                  className="d-flex justify-content-center align-items-center"
-                  style={{
-                    marginTop: -3,
-                  }}
+                  className="d-flex justify-content-center align-items-center button-loader"
                 />
               }
             />
@@ -86,7 +83,6 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         </Button>
       </div>
       <hr className="mb-0"></hr>
-      {/* window.open('https://myapi.com/download/file-name') */}
     </div>
   );
 };

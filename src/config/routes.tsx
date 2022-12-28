@@ -6,7 +6,6 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import Footer from "../components/functional/Footer";
 import Header from "../components/functional/Header";
 import { Profile } from "../screens/index";
 import ScrollToTop from "../components/generic/scrollToTop";
@@ -73,14 +72,14 @@ const MainRouter = () => {
               src={
                 "https://img.icons8.com/ios-glyphs/90/ffffff/bright-moon--v1.png"
               }
-              style={{ height: 30 }}
+              className={"height-30"}
             />
           ) : (
             <img
               src={
                 "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/128/FFA300/external-sun-summer-tanah-basah-glyph-tanah-basah.png"
               }
-              style={{ height: 30 }}
+              className={"height-30"}
             />
           )}
         </div>

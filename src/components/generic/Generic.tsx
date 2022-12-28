@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { cssHover } from "./hoverProps";
 import { icons } from "../../config/configuration";
 import classNames from "classnames";
-import { Progress } from "antd";
+import { Progress, Tag } from "antd";
 import { CSSModule } from "reactstrap/types/lib/utils";
 
 const Generic = {
@@ -61,14 +61,11 @@ const Generic = {
           strokeColor={"0069fd"}
           trailColor={isDark ? "#bbb" : ""}
         />
-        <div
-          className=" col-12 d-flex justify-content-between"
-          style={{ marginTop: -10 }}
-        >
-          <span style={{ fontSize: 10 }}>Beginner</span>
-          <span style={{ fontSize: 10 }}>Intermediate</span>
-          <span style={{ fontSize: 10 }}>Proficient</span>
-          <span style={{ fontSize: 10 }}>Expert</span>
+        <div className=" col-12 d-flex justify-content-between custom-progress-bar-scale-label-container">
+          <span className="font-10">Beginner</span>
+          <span className="font-10">Intermediate</span>
+          <span className="font-10">Proficient</span>
+          <span className="font-10">Expert</span>
         </div>
       </div>
     );
@@ -76,16 +73,46 @@ const Generic = {
   GradientBackground: ({ bgImageUrl }: { bgImageUrl: string }) => {
     return (
       <div
-        className="position-absolute w-100 h-100"
+        className="position-absolute w-100 h-100 gradient-background"
         style={{
           backgroundImage: `url(${bgImageUrl})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          flex: 1,
-          zIndex: 0,
         }}
       >
         <div className=" w-100 h-100 header-cover"></div>
+      </div>
+    );
+  },
+  TagList: ({
+    listTitle,
+    listTitleStyle,
+    listTitleClassName,
+    taglist = [],
+    tagStyle,
+    tagClassName,
+    tagContainerClassName,
+  }: {
+    listTitle?: string;
+    listTitleStyle?: string;
+    listTitleClassName?: string;
+    taglist: string[];
+    tagStyle?: string;
+    tagClassName?: string;
+    tagContainerClassName?: string;
+  }) => {
+    return (
+      <div className="col-12">
+        {listTitle && <p className={listTitleClassName}>{listTitle}</p>}
+
+        <div
+          className={classNames(
+            "col-12 d-flex flex-wrap",
+            tagContainerClassName
+          )}
+        >
+          {taglist.map((tag: String) => (
+            <Tag className={tagClassName}>{tag}</Tag>
+          ))}
+        </div>
       </div>
     );
   },

@@ -80,7 +80,7 @@ const Profile = (props: any) => {
         {/* Menu(left) container */}
         <div
           className={classNames(
-            "p-0  flex-1 d-flex flex-column ",
+            "p-0  flex-1 d-flex flex-column profile-menu-wrapper ",
             menuItems.length > 0
               ? "col-0 d-none col-sm-1 col-lg-2 d-sm-block "
               : "col-0 d-none",

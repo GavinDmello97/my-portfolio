@@ -102,11 +102,7 @@ const BlogCard = ({ blogDetails: blog }: { blogDetails: UserBlog }) => {
   return (
     <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
       <CardTitle className="fw-bold h3">{blog.title}</CardTitle>
-      <CardImg
-        src={blog.thumbnail}
-        className="w-100"
-        style={{ aspectRatio: "1/1" }}
-      />
+      <CardImg src={blog.thumbnail} className="w-100 ratio-1x1" />
 
       <CardBody className="p-0 pt-2">
         <div className="col-12 d-flex flex-column cardDescription ">
@@ -129,23 +125,16 @@ const BlogCard = ({ blogDetails: blog }: { blogDetails: UserBlog }) => {
           </div>
 
           {/* Tech stack container */}
-          <div className="col-12 mt-2">
-            <p
-              className=" col-12 span  mb-1"
-              style={{ fontSize: 14, opacity: 0.6 }}
-            >
-              Keywords
-            </p>
-            {blog.categories && (
-              <div className="col-12 d-flex flex-wrap">
-                {blog.categories.map((category) => (
-                  <Tag className="tag-text mb-2  px-2" style={{ fontSize: 14 }}>
-                    {category}
-                  </Tag>
-                ))}
-              </div>
-            )}
-          </div>
+          {blog.categories && blog.categories.length > 1 && (
+            <div className="col-12 mt-2">
+              <Generic.TagList
+                taglist={blog.categories}
+                tagClassName={"tag-text mb-2  px-2 font-14"}
+                listTitle={"Keywords"}
+                listTitleClassName={"col-12 span  mb-1 opacity-50 font-14"}
+              />
+            </div>
+          )}
         </div>
       </CardBody>
     </Card>

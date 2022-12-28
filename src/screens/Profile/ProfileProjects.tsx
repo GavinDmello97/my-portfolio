@@ -230,23 +230,16 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
           </div>
 
           {/* Tech stack container */}
-          <div className="col-12 mt-2">
-            <p
-              className=" col-12 span  mb-1"
-              style={{ fontSize: 14, opacity: 0.6 }}
-            >
-              Stack Used
-            </p>
-            {project.tech_stack && (
-              <div className="col-12 d-flex flex-wrap">
-                {project.tech_stack.map((tech) => (
-                  <Tag className="tag-text mb-2  px-2" style={{ fontSize: 14 }}>
-                    {tech}
-                  </Tag>
-                ))}
-              </div>
-            )}
-          </div>
+          {project.tech_stack && project.tech_stack.length > 0 && (
+            <div className="col-12 mt-2">
+              <Generic.TagList
+                taglist={project.tech_stack}
+                tagClassName={"tag-text mb-2  px-2 font-14"}
+                listTitle={"Stack Used"}
+                listTitleClassName={"col-12 span  mb-1 opacity-50 font-14"}
+              />
+            </div>
+          )}
         </div>
       </CardBody>
     </Card>
