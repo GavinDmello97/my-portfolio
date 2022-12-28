@@ -27,7 +27,7 @@ type ProfileBlogsType = {
   className?: string;
 };
 
-const ProfileBlogss = ({ blogs, className = "" }: ProfileBlogsType) => {
+const ProfileBlogs = ({ blogs, className = "" }: ProfileBlogsType) => {
   const [isInViewport, setViewStatus] = useState(false);
   const ref = useRef<null | HTMLDivElement>(null);
   const inViewport = useIntersection(
@@ -64,7 +64,7 @@ const ProfileBlogss = ({ blogs, className = "" }: ProfileBlogsType) => {
   );
 };
 
-const BlogCard = ({ blogDetails }: { blogDetails: UserBlog }) => {
+const BlogCard = ({ blogDetails: blog }: { blogDetails: UserBlog }) => {
   const state = useSelector((state: any) => {
     return { rootState: state.rootActionReducer };
   });
@@ -87,14 +87,69 @@ const BlogCard = ({ blogDetails }: { blogDetails: UserBlog }) => {
         }
   );
 
-  const {} = blogDetails;
+  // const {
+  //   author,
+  //   categories,
+  //   content,
+  //   description,
+  //   link,
+  //   guid,
+  //   pubDate,
+  //   thumbnail,
+  //   title,
+  // } = blog;
 
   return (
-    <Card
-      className={classNames("p-4 project-card h-100")}
-      {...cardHoverStyle}
-    ></Card>
+    <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
+      <CardTitle className="fw-bold h3">{blog.title}</CardTitle>
+      <CardImg
+        src={blog.thumbnail}
+        className="w-100"
+        style={{ aspectRatio: "1/1" }}
+      />
+
+      <CardBody className="p-0 pt-2">
+        <div className="col-12 d-flex flex-column cardDescription ">
+          <div className=" col-12 d-flex  p-0 m-0 py-2">
+            <CardLink
+              href={blog.link}
+              className="text-decoration-none col-12 pe-2 m-0 border-0"
+            >
+              <Button
+                shape="round"
+                className={classNames("button-style w-100 text-wrap  h-100 ")}
+              >
+                <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
+                <span className="d-block d-sm-none d-xl-block">
+                  {/* {blog.guid} */}
+                  {"Blog Link"}
+                </span>
+              </Button>
+            </CardLink>
+          </div>
+
+          {/* Tech stack container */}
+          <div className="col-12 mt-2">
+            <p
+              className=" col-12 span  mb-1"
+              style={{ fontSize: 14, opacity: 0.6 }}
+            >
+              Keywords
+            </p>
+            {blog.categories && (
+              <div className="col-12 d-flex flex-wrap">
+                {blog.categories.map((category) => (
+                  <Tag className="tag-text mb-2  px-2" style={{ fontSize: 14 }}>
+                    {category}
+                  </Tag>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </CardBody>
+    </Card>
   );
 };
 
-export default ProfileBlogss;
+export default ProfileBlogs;
