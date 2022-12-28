@@ -20,8 +20,18 @@ const ProfileMenu = ({
 
   return (
     <div className=" sticky-top flex-1 d-flex flex-column justify-content-start align-items-start  ">
-      <div className=" bg-warning  w-100 p-3 text-center ">
-        <b className="bg-warning d-none d-lg-block">SCROLL TO</b>
+      <div
+        className={`${
+          isDark ? "bg-warning" : "bg-warning"
+        } w-100 p-3 text-center `}
+      >
+        <b
+          className={`${
+            isDark ? "bg-warning" : "bg-warning"
+          } d-none d-lg-block text-white`}
+        >
+          SCROLL TO
+        </b>
         <i className="fa fa-map fa-lg d-block d-lg-none" />
       </div>
       <Menu

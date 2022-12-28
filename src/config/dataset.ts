@@ -34,7 +34,7 @@ export const USER: User = {
         university_name: "University of Massachusetts, Dartmouth",
         start_year: "2021",
         end_year: "2023",
-        degree: "Masters degree",
+        degree: "Masters",
         specialization: "Computer Science",
         subjects: [
           "Web Development",
@@ -48,7 +48,7 @@ export const USER: User = {
         university_name: "University of Mumbai",
         start_year: "2015",
         end_year: "2019",
-        degree: "Bachelors degree",
+        degree: "Bachelors",
         specialization: "Computer Science and Engineering",
         subjects: [
           "Data Structures",

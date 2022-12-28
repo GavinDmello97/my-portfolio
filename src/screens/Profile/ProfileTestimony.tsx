@@ -64,16 +64,13 @@ const ProfileTestimony = ({
                       {" "}
                       <p
                         className={"m-0"}
-                        style={{ color: "rgba(255, 255, 255,0.7)" }}
+                        style={{ color: "rgba(255, 255, 255,1)" }}
                       >
                         {` ${testimony.provider_first_name} ${testimony.provider_last_name}`}{" "}
                         <span style={{ color: "rgba(255, 255, 255,0.7)" }}>
-                          {`(${testimony.provider_position})`}
+                          {`(${testimony.provider_position} @ ${testimony.provider_company_name})`}
                         </span>
                       </p>
-                      <p
-                        style={{ color: "rgba(255, 255, 255,0.7)" }}
-                      >{`@ ${testimony.provider_company_name}`}</p>
                     </div>
                   </div>
                 </div>
