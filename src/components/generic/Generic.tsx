@@ -5,19 +5,23 @@ import { cssHover } from "./hoverProps";
 import { icons } from "../../config/configuration";
 import classNames from "classnames";
 import { Progress } from "antd";
+import { CSSModule } from "reactstrap/types/lib/utils";
 
 const Generic = {
   AnimatedText: ({
     text = "",
     viewPortVisible,
+    overrideStyle,
   }: {
     text: string;
     viewPortVisible?: boolean;
+    overrideStyle?: string;
   }) => {
     return (
       <p
         className={classNames(
-          viewPortVisible ? "animated-text col-12" : "d-none"
+          viewPortVisible ? "animated-text col-12" : "d-none",
+          overrideStyle
         )}
       >
         {text}
