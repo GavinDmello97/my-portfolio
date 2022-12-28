@@ -163,7 +163,7 @@ export const USER: User = {
       project_name: "My Portfolio",
       project_description:
         "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
-      banner_picture: require(`../assets/images/delete_later/myportfolio.jpeg`),
+      thumbnail: require(`../assets/images/delete_later/myportfolio.jpeg`),
       tech_stack: [
         "React.js",
         "SASS",
@@ -180,7 +180,7 @@ export const USER: User = {
       project_name: "Blogica",
       project_description:
         "Blogica is a mobile-responsive web application, that acts as a platform where you can interact with and read articles published by article writers. Explore thousands of articles based on Culture and Civilization, Defence and Security, Science and Technology, Stories, Essays and other similar categories today.",
-      banner_picture: require(`../assets/images/delete_later/blogica.png`),
+      thumbnail: require(`../assets/images/delete_later/blogica.png`),
 
       tech_stack: [
         "React.js",
@@ -202,7 +202,7 @@ export const USER: User = {
       project_name: "Recipe Diary",
       project_description:
         "Recipe Diary is an online recipe registry application where one can share new recipes as well as browse from a large collection of existing recipes added by other users to cook something delicious. Having a craving for food or about to be visited by guest, Recipe Diary is all you need! Happy Cooking!",
-      banner_picture: require(`../assets/images/delete_later/recipediary.png`),
+      thumbnail: require(`../assets/images/delete_later/recipediary.png`),
       tech_stack: [
         "React.js",
         "SASS",
@@ -221,7 +221,7 @@ export const USER: User = {
       project_name: "Dia Fit",
       project_description:
         "Dia fit is a mobile platform application for android and ios users to track your diet, use follow along excercises as well as excercise usage of other features such as BMI calculator and Fat Percentage calculator",
-      banner_picture:
+      thumbnail:
         "https://i.pinimg.com/736x/2c/f0/3a/2cf03abcf226439e4608d5081f897675.jpg",
 
       tech_stack: [
@@ -245,14 +245,15 @@ export const USER: User = {
       provider_first_name: "Deepak",
       provider_last_name: "Singh",
       provider_position: "Engineering Lead",
-
       provider_message: `Gavin is undoubtedly an excellent engineer. He was a good team member while we worked closely at Zaya. I particularly appreciated his incredible attention to detail, enduring emphasis on quality, and always attempting a pixel perfect UI be it webapp or mobile app.\nHe is also a great communicator, able to explain topics clearly and concisely, as well as being able to debate his viewpoints calmly and objectively.`,
+      provider_company_name: "Zaya Learning Labs",
     },
     {
       provider_first_name: "Pritesh",
       provider_last_name: "Pereira",
       provider_position: "Technical Lead",
-      provider_message: `Gavin is someone who is able to effectively learn new programming concepts and technologies and apply them in a practical setting. He has strong foundation in computer science and able to write clean, efficient, and well-documented code. In addition, he's great team player, able to communicate effectively with both technical and non-technical colleagues, and very proactive in seeking out opportunities to learn and improve his skills. I found him very proficient at troubleshooting and debuging code and has exhibited great ability to work independently on assigned tasks. I've no doubts that Gavin is going to be great addition to any technology team in the future.`,
+      provider_message: `Gavin is someone who is able to effectively learn new programming concepts and technologies and apply them in a practical setting. He has strong foundation in computer science and able to write clean, efficient, and well-documented code. In addition, he's great team player, able to communicate effectively with both technical and non-technical colleagues, and very proactive in seeking out opportunities to learn and improve his skills. I found him very proficient at troubleshooting and debuging code and has exhibited great ability to work independently on assigned tasks.`,
+      provider_company_name: "GetSetUp",
     },
   ],
   blogs: null,

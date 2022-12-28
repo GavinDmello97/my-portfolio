@@ -81,7 +81,7 @@ const Profile = (props: any) => {
           className={classNames(
             "p-0  flex-1 d-flex flex-column ",
             menuItems.length > 0
-              ? "col-0 d-none col-sm-1 col-md-2 d-sm-block "
+              ? "col-0 d-none col-sm-1 col-lg-2 d-sm-block "
               : "col-0 d-none",
             isDark ? "dark-theme" : ""
           )}
@@ -98,7 +98,7 @@ const Profile = (props: any) => {
         <div
           className={classNames(
             "p-0 ",
-            menuItems.length > 0 ? "col-12 col-sm-11 col-md-10" : "col-12"
+            menuItems.length > 0 ? "col-12 col-sm-11 col-lg-10" : "col-12"
           )}
         >
           {/* User's profile */}
@@ -134,6 +134,12 @@ const Profile = (props: any) => {
             {user.testimonies && (
               <div className="col-12" ref={references.testimonies}>
                 <ProfileTestimony testimonies={user.testimonies} />
+              </div>
+            )}
+
+            {user.blogs && (
+              <div className="col-12" ref={references.blogs}>
+                {/* <ProfileBlogs blogs={user.blogs} /> */}
               </div>
             )}
 

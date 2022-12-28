@@ -30,7 +30,7 @@ const dataObjects = {
       scrollTo: "",
     },
     testimonies: {
-      key: "blogs",
+      key: "testimonies",
       icon: "fa fa-graduation-cap fa-lg",
       title: "Testimonies",
       scrollTo: "",

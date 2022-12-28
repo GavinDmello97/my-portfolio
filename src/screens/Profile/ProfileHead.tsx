@@ -18,7 +18,7 @@ type ProfileInfoType = {
 type SocialLinkType = {
   bootstrapIcon: string;
   bootstrapIconSize: string;
-  to: To;
+  to: string;
   linkClassName?: string | undefined;
   iconClassName?: string | undefined;
 };
@@ -189,11 +189,11 @@ var SocialLink = ({
   iconClassName = "",
 }: SocialLinkType) => {
   return (
-    <Link to={to} className={classNames("link", linkClassName)}>
+    <a href={to} className={classNames("link", linkClassName)}>
       <i
         className={classNames(bootstrapIcon, bootstrapIconSize, iconClassName)}
       ></i>
-    </Link>
+    </a>
   );
 };
 

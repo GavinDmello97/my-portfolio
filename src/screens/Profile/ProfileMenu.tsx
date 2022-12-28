@@ -21,8 +21,8 @@ const ProfileMenu = ({
   return (
     <div className=" sticky-top flex-1 d-flex flex-column justify-content-start align-items-start  ">
       <div className=" bg-warning  w-100 p-3 text-center ">
-        <b className="bg-warning d-none d-md-block">SCROLL TO</b>
-        <i className="fa fa-map fa-lg d-block d-md-none" />
+        <b className="bg-warning d-none d-lg-block">SCROLL TO</b>
+        <i className="fa fa-map fa-lg d-block d-lg-none" />
       </div>
       <Menu
         defaultSelectedKeys={["profile"]}
@@ -36,7 +36,6 @@ const ProfileMenu = ({
               key={menu.key}
               className=" col-12 px-1 container menu-item"
               onClick={() => {
-                console.log(references[menu.key]);
                 references[menu.key].current.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
@@ -46,11 +45,11 @@ const ProfileMenu = ({
               //   style={{ backgroundColor: "red" }}
             >
               <div
-                className="col-12 d-flex justify-content-center justify-content-md-start align-items-center  container-fluid bg-common"
+                className="col-12 d-flex justify-content-center justify-content-lg-start align-items-center  container-fluid bg-common"
                 style={{ fontSize: 18, height: 40 }}
               >
                 <i className={classNames(menu.icon, "noselect ")} />
-                <span className="d-none d-md-block ms-2 noselect  flex-wrap">
+                <span className="d-none d-lg-block ms-2 noselect  flex-wrap">
                   {menu.title}
                 </span>
               </div>

@@ -69,7 +69,7 @@ const ProfileProjects = ({ projects, className = "" }: ProfileProjectType) => {
     <div className={classNames("col-10 px-3 profile-about", className)}>
       <div className="col-12 container  py-5" ref={ref}>
         <Generic.AnimatedText
-          text={"Projects"}
+          text={"Projects_"}
           viewPortVisible={isInViewport}
         />
         <motion.div
@@ -146,7 +146,7 @@ var Projects = ({ projectList }: { projectList: UserProject[] }) => {
       {/* Project container */}
       <div className="flex-1 d-flex flex-row flex-wrap align-items-stretch">
         {filterProjects(projectList, activeTab).map((project, index) => (
-          <div className=" pt-3 pb-0 px-md-2 col-12 col-sm-6 col-lg-4 flex-1">
+          <div className=" pt-4 pt-sm-3 pb-0 px-sm-2 col-12 col-sm-6 col-lg-4 flex-1">
             <ProjectCard key={index} project={project} />
           </div>
         ))}
@@ -182,7 +182,7 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
     <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
       <CardTitle className="fw-bold h3">{project.project_name}</CardTitle>
       <CardImg
-        src={project.banner_picture}
+        src={project.thumbnail}
         className="w-100"
         style={{ aspectRatio: "1/1" }}
       />

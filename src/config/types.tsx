@@ -14,6 +14,7 @@ export type UserTestimony = {
   provider_last_name: string;
   provider_message: string;
   provider_position: string;
+  provider_company_name: string;
 };
 
 export type UserProfile = {
@@ -74,14 +75,23 @@ export type SocialLinks = {
 export type UserProject = {
   project_name: string;
   project_description?: string;
-  banner_picture: string;
+  thumbnail: string;
   tech_stack: string[];
   code_link?: string;
   project_link?: string;
   type: string;
 };
 
-export type UserBlog = {};
+export type UserBlog = {
+  author?: string;
+  categories: string[];
+  content: string;
+  description: string;
+  link: string;
+  pubDate: string;
+  thumbnail: string;
+  title: string;
+};
 
 export type MenuItem = Required<MenuProps>["items"][number];
 
