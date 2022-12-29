@@ -6,7 +6,7 @@ import { icons } from "../../config/configuration";
 import classNames from "classnames";
 import { Progress, Tag } from "antd";
 import { CSSModule } from "reactstrap/types/lib/utils";
-
+import "./Generic.scss";
 const Generic = {
   AnimatedText: ({
     text = "",
