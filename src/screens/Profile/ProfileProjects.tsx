@@ -157,6 +157,13 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
         }
   );
 
+  type LivePageButtonText = { website: string; mobile: string; plugin: string };
+  const livePageButtonText: LivePageButtonText = {
+    website: "Live Website",
+    mobile: "Check on PlayStore",
+    plugin: "View Plugin",
+  };
+
   return (
     <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
       <CardTitle className="fw-bold h3">{project.project_name}</CardTitle>
@@ -173,10 +180,10 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
             theme="bubble"
             value={project.project_description}
           />
-          <div className=" col-12 d-flex  p-0 m-0 py-2">
+          <div className=" col-12   p-0 m-0 py-2">
             <CardLink
               href={project.project_link}
-              className="text-decoration-none col-6 pe-2 m-0"
+              className="text-decoration-none col-12  m-0"
             >
               <Button
                 shape="round"
@@ -184,18 +191,18 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
               >
                 <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
                 <span className="d-block d-sm-none d-xl-block">
-                  {"Project (live)"}
+                  {livePageButtonText[project.type as keyof LivePageButtonText]}
                 </span>
               </Button>
             </CardLink>
             <CardLink
               href={project.project_link}
-              className="text-decoration-none col-6 pe-2 m-0"
+              className="text-decoration-none col-12 m-0 "
             >
               <Button
                 shape="round"
                 className={classNames(
-                  "button-style custom-button-style w-100 text-wrap  h-100"
+                  "button-style custom-button-style w-100 text-wrap  h-100 mt-2"
                 )}
               >
                 <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" />

@@ -97,7 +97,7 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
                 containerClassName="mb-3 row"
                 title="Email"
                 isValueLink={true}
-                href="mailto:mail@mail.com"
+                href={`mailto:${email}`}
                 value={email}
               />
 

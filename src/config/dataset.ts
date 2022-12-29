@@ -170,7 +170,7 @@ export const USER: User = {
       project_name: "My Portfolio",
       project_description:
         "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
-      thumbnail: require(`../assets/images/delete_later/myportfolio.jpeg`),
+      thumbnail: require(`../assets/images/delete_later/myportfolio.png`),
       tech_stack: [
         "React.js",
         "SASS",
