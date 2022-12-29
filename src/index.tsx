@@ -20,9 +20,9 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
   // <ConfigProvider locale={enUS}>
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>
+  </HashRouter>
   // </ConfigProvider>
   // {/* </React.StrictMode> */}
 );
