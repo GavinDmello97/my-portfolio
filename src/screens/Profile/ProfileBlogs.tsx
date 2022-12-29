@@ -102,7 +102,11 @@ const BlogCard = ({ blogDetails: blog }: { blogDetails: UserBlog }) => {
   return (
     <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
       <CardTitle className="fw-bold h3">{blog.title}</CardTitle>
-      <CardImg src={blog.thumbnail} className="w-100 ratio-1x1" />
+      <CardImg
+        src={blog.thumbnail}
+        className="w-100 ratio-1x1"
+        style={{ aspectRatio: "1/1" }}
+      />
 
       <CardBody className="p-0 pt-2">
         <div className="col-12 d-flex flex-column cardDescription ">
