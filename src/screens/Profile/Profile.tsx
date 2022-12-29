@@ -54,7 +54,7 @@ const Profile = (props: any) => {
             },
           ])
         );
-    }, 2000);
+    }, 200);
   }, []);
 
   const state = useSelector((state: any) => {

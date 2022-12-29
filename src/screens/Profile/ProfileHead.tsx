@@ -1,11 +1,12 @@
 import classNames from "classnames";
 import { Link, To } from "react-router-dom";
-import { images } from "../../config/configuration";
-import { Image } from "antd";
+import { gifs, icons, images } from "../../config/configuration";
+import { Image, Tooltip, message } from "antd";
 import { User, UserProfile } from "../../config/types";
 import { CSSModule } from "reactstrap/types/lib/utils";
 import { formattingPhone } from "../../config/utils";
 import Generic from "../../components/generic/Generic";
+import { Button } from "reactstrap";
 type ProfileInfoType = {
   containerClassName: string;
   title: string;
@@ -57,9 +58,9 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
         }
       />
       {/* Foreground Content Container */}
-      <div className="container " style={{ zIndex: 400 }}>
+      <div className="container mt-5 " style={{ zIndex: 400 }}>
         {/* Profile Content Container */}
-        <div className=" personal-profile  col-12 d-flex flex-column flex-md-row py-5 align-items-center ">
+        <div className=" personal-profile  col-12 d-flex flex-column flex-md-row py-5 align-items-center position-relative ">
           {/* Profile Left Section */}
           <div className="col-12 col-md-5 col-lg-4 col-xl-3   d-flex px-3">
             <Image
@@ -161,6 +162,25 @@ const ProfileHead = ({ details }: { details: UserProfile }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="position-absolute top-0 end-0 m-3">
+        <Tooltip title="Share portfolio" placement="left">
+          <Button
+            className="bg-white text-black bg-opacity-10 border-0 p-1 px-2 "
+            onClick={() => {
+              navigator.clipboard.writeText(
+                "https://gavindmello97.github.io/my-portfolio/"
+              );
+              message.success("Copied portfolio to clipboard");
+            }}
+          >
+            <img
+              src={gifs.notification_bell}
+              alt={"share"}
+              style={{ width: 50, height: 50 }}
+            />
+          </Button>
+        </Tooltip>
       </div>
     </div>
   );

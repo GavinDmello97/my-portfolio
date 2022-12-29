@@ -62,7 +62,9 @@ const images: any = {
   food_background: require("../assets/images/food-background-1.jpg"),
 };
 
-const gifs: any = {};
+const gifs: any = {
+  notification_bell: require("../assets/gifs/notification-bell.gif"),
+};
 const svgs: any = {
   wave: require("../assets/svgs/Wave.svg"),
   loading: require("../assets/svgs/loader.svg"),
