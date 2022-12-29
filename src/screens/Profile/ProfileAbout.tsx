@@ -1,9 +1,10 @@
 import classNames from "classnames";
-import { Button } from "antd";
+import { Button, Spin } from "antd";
 import Generic from "../../components/generic/Generic";
 import { MutableRefObject, useRef, useState } from "react";
 import useIntersection from "../../components/generic/useIntersection";
 import { motion, useAnimation } from "framer-motion";
+import { LoadingOutlined } from "@ant-design/icons";
 
 type ProfileAboutType = {
   aboutMe: string | null;
@@ -11,6 +12,7 @@ type ProfileAboutType = {
 };
 
 const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
+  const [isLoading, setButtonLoading] = useState(false);
   const [isInViewport, setViewStatus] = useState(false);
   const ref = useRef<null | HTMLDivElement>(null);
   const inViewport = useIntersection(
@@ -23,6 +25,17 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
     setViewStatus(true);
     controls.start({ opacity: 1, transform: "translateX(0px)" });
   }
+
+  const fetchResume = () => {
+    setButtonLoading(true);
+    // Setting various property values
+    let alink = document.createElement("a");
+    alink.href =
+      "https://drive.google.com/uc?export=download&id=1X33Pnn9-rbi2ozP2wEYIFkTjyOl1cwsf";
+    alink.download = "Gavin_Dmello_Resume.pdf";
+    alink.click();
+    setTimeout(() => setButtonLoading(false), 2000);
+  };
 
   return (
     <div className={classNames("col-10 px-3  profile-about", className)}>
@@ -46,16 +59,30 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         </motion.div>
         {/* </Animate> */}
         <Button
+          disabled={isLoading}
           shape="round"
           size={"large"}
           className={classNames("button-style ")}
+          onClick={() => fetchResume()}
         >
-          <i className="fa fa-download fa-md me-2 "></i>
-          <span className="f-karla">Download CV</span>
+          {!isLoading ? (
+            <div>
+              <i className="fa fa-download fa-md me-2 "></i>
+              <span className="f-karla">Download CV</span>
+            </div>
+          ) : (
+            <Spin
+              indicator={
+                <LoadingOutlined
+                  spin
+                  className="d-flex justify-content-center align-items-center button-loader"
+                />
+              }
+            />
+          )}
         </Button>
       </div>
       <hr className="mb-0"></hr>
-      {/* window.open('https://myapi.com/download/file-name') */}
     </div>
   );
 };

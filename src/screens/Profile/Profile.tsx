@@ -16,6 +16,7 @@ import ProfileProjects from "./ProfileProjects";
 import { setProjectTabs } from "../../redux/actionReducers/projectsOnDisplayReducer";
 import Generic from "../../components/generic/Generic";
 import ProfileTestimony from "./ProfileTestimony";
+import ProfileBlogs from "./ProfileBlogs";
 
 const Profile = (props: any) => {
   const dispatch = useDispatch();
@@ -79,7 +80,7 @@ const Profile = (props: any) => {
         {/* Menu(left) container */}
         <div
           className={classNames(
-            "p-0  flex-1 d-flex flex-column ",
+            "p-0  flex-1 d-flex flex-column profile-menu-wrapper ",
             menuItems.length > 0
               ? "col-0 d-none col-sm-1 col-lg-2 d-sm-block "
               : "col-0 d-none",
@@ -139,12 +140,12 @@ const Profile = (props: any) => {
 
             {user.blogs && (
               <div className="col-12" ref={references.blogs}>
-                {/* <ProfileBlogs blogs={user.blogs} /> */}
+                <ProfileBlogs blogs={user.blogs} />
               </div>
             )}
-
+            {/* 
             <Button style={{ marginTop: 2000 }}>Xaas</Button>
-            <p className="my-4">Dadttss</p>
+            <p className="my-4">Dadttss</p> */}
           </div>
         </div>
       </div>

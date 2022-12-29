@@ -93,20 +93,17 @@ var ResumeEducation = ({
             return (
               <Timeline.Item className="col-12" key={index}>
                 <div className="col-12 ">
-                  <p
-                    className={`text-primary  fw-bold col-12 mb-0`}
-                    style={{ fontSize: 16 }}
-                  >
+                  <p className={`text-primary  fw-bold col-12 mb-0 font-16`}>
                     {`${education.degree} in ${education.specialization}`}
                   </p>
-                  <p className="col-12 mb-0" style={{ fontSize: 14 }}>
+                  <p className="col-12 mb-0 font-14">
                     {education.university_name}
                   </p>
-                  <p className="col-12 mb-2" style={{ fontSize: 14 }}>
+                  <p className="col-12 mb-2 font-14">
                     {education.start_year} - {education.end_year}{" "}
                     {education.gpa && (
                       <Tag
-                        className={`bg-primary mx-3`}
+                        className={`bg-primary mx-3 `}
                         style={{
                           color: "white",
                           border: "0.5px solid rgba(255,255,255,0.5)",
@@ -118,26 +115,20 @@ var ResumeEducation = ({
                     )}
                   </p>
 
-                  {education.subjects && (
-                    <div className="col-12">
-                      <p
-                        className={`${
-                          isDark ? "text-white" : "text-secondary"
-                        } mb-1 mt-2`}
-                      >
-                        ✦ Relevant Coursework ✦
-                      </p>
-                      <div className="col-12 d-flex flex-wrap">
-                        {education.subjects.map((subject) => (
-                          <Tag
-                            className="tag-text mb-2  px-2"
-                            style={{ fontSize: 14 }}
-                          >
-                            {subject}
-                          </Tag>
-                        ))}
-                      </div>
-                    </div>
+                  {education.subjects && education.subjects.length > 0 && (
+                    <Generic.TagList
+                      taglist={education.subjects}
+                      tagClassName={classNames(
+                        `tag-text mb-2  px-2 ${
+                          isDark ? "text-white " : "text-dark"
+                        } font-14`
+                      )}
+                      listTitle={"✦ Relevant Coursework ✦"}
+                      listTitleClassName={`${
+                        isDark ? "text-white" : "text-secondary"
+                      } mb-1 mt-2`}
+                      tagContainerClassName={"bg-transparent"}
+                    />
                   )}
                 </div>
               </Timeline.Item>
@@ -175,41 +166,30 @@ var ResumeEmployment = ({
             return (
               <Timeline.Item className="col-12">
                 <div className="col-12 ">
-                  <p
-                    className="text-primary fw-bold col-12 mb-0"
-                    style={{ fontSize: 16 }}
-                  >
+                  <p className="text-primary fw-bold col-12 mb-0 font-16">
                     {employment.position_title}
                   </p>
 
-                  <p className="col-12 mb-0" style={{ fontSize: 14 }}>
+                  <p className="col-12 mb-0 font-14">
                     {employment.company_name}
                   </p>
-                  <p className="col-12 mb-2" style={{ fontSize: 14 }}>
+                  <p className="col-12 mb-2 font-14">
                     {`${employment.start_month} ${employment.start_year} - ${employment.end_month} ${employment.end_year}`}
                   </p>
 
-                  <p
-                    className={`${
+                  <Generic.TagList
+                    taglist={employment.tech_stack}
+                    tagClassName={classNames(
+                      `tag-text mb-2  px-2 ${
+                        isDark ? "text-white " : "text-dark"
+                      } font-14`
+                    )}
+                    listTitle={"✦ Tech Stack ✦"}
+                    listTitleClassName={`${
                       isDark ? "text-white" : "text-secondary"
                     } mb-1 mt-2`}
-                  >
-                    ✦ Tech Stack ✦
-                  </p>
-                  {employment.tech_stack && (
-                    <div className="col-12 d-flex flex-wrap bg-transparent">
-                      {employment.tech_stack.map((tech) => (
-                        <Tag
-                          className={`tag-text mb-2  px-2 ${
-                            isDark ? "text-white " : "text-dark"
-                          } `}
-                          style={{ fontSize: 14 }}
-                        >
-                          {tech}
-                        </Tag>
-                      ))}
-                    </div>
-                  )}
+                    tagContainerClassName={"bg-transparent"}
+                  />
                 </div>
               </Timeline.Item>
             );

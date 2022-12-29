@@ -72,10 +72,7 @@ const Header = ({ modalCallback }: any) => {
     <div className="col-12">
       {/* Show toggle button when size is smaller than md */}
       <Navbar light expand="md" className="noselect border-bottom col-12">
-        <div
-          className="noselect container-fluid px-sm-4 row mx-sm-0"
-          // style={{display: 'flex', flexDirection: 'row'}}
-        >
+        <div className="noselect container-fluid px-sm-4 row mx-sm-0">
           {/* Toggle button to show/hide list/elements */}
           <NavbarToggler
             className="noselect col-auto"
@@ -85,10 +82,7 @@ const Header = ({ modalCallback }: any) => {
             className="noselect col-8 col-sm-3 m-sm-0 p-sm-0"
             href="/main/home"
           >
-            <div
-              className="noselect d-flex flex-row align-items-center"
-              style={{ marginLeft: 12 }}
-            >
+            <div className="noselect d-flex flex-row align-items-center">
               <span className="noselect   col-auto  mb-0 h-25 align-middle h5">
                 My portfolio
               </span>

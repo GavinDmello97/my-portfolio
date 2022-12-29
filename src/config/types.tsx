@@ -88,6 +88,7 @@ export type UserBlog = {
   content: string;
   description: string;
   link: string;
+  guid: string;
   pubDate: string;
   thumbnail: string;
   title: string;

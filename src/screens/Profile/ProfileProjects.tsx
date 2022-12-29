@@ -106,27 +106,6 @@ const ProjectTabs = ({ options }: { options: MenuProps["items"] }) => {
       mode="horizontal"
       items={options}
     />
-    // <Menu
-    //   className=" col col-12 d-flex flex-row "
-    //   defaultSelectedKeys={["all"]}
-    //   // selectedKeys={[activeButton]}
-    //   mode={"inline"}
-    //   theme={isDark ? "dark" : "light"}
-    //   style={{ flex: 1 }}
-    // >
-    //   {Object.entries(options).map(([key, value]) => {
-    //     return (
-    //       <Menu.Item
-    //         key={key}
-    //         className="px-1"
-    //         style={{ width: "min-content" }}
-    //         //   style={{ backgroundColor: "red" }}
-    //       >
-    //         {value.toUpperCase()}
-    //       </Menu.Item>
-    //     );
-    //   })}
-    // </Menu>
   );
 };
 
@@ -181,21 +160,15 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
   return (
     <Card className={classNames("p-4 project-card h-100")} {...cardHoverStyle}>
       <CardTitle className="fw-bold h3">{project.project_name}</CardTitle>
-      <CardImg
-        src={project.thumbnail}
-        className="w-100"
-        style={{ aspectRatio: "1/1" }}
-      />
+      <CardImg src={project.thumbnail} className="w-100 ratio-1x1" />
       <CardBody className="p-0 pt-2">
         <div className="col-12 d-flex flex-column cardDescription ">
           <ReactQuill
             className=" noselect cursorPointer  col-12"
             readOnly={true}
-            style={{}}
             theme="bubble"
             value={project.project_description}
           />
-          {/* <p className="col-12">{project.project_description}</p> */}
           <div className=" col-12 d-flex  p-0 m-0 py-2">
             <CardLink
               href={project.project_link}
@@ -230,23 +203,16 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
           </div>
 
           {/* Tech stack container */}
-          <div className="col-12 mt-2">
-            <p
-              className=" col-12 span  mb-1"
-              style={{ fontSize: 14, opacity: 0.6 }}
-            >
-              Stack Used
-            </p>
-            {project.tech_stack && (
-              <div className="col-12 d-flex flex-wrap">
-                {project.tech_stack.map((tech) => (
-                  <Tag className="tag-text mb-2  px-2" style={{ fontSize: 14 }}>
-                    {tech}
-                  </Tag>
-                ))}
-              </div>
-            )}
-          </div>
+          {project.tech_stack && project.tech_stack.length > 0 && (
+            <div className="col-12 mt-2">
+              <Generic.TagList
+                taglist={project.tech_stack}
+                tagClassName={"tag-text mb-2  px-2 font-14"}
+                listTitle={"Stack Used"}
+                listTitleClassName={"col-12 span  mb-1 opacity-50 font-14"}
+              />
+            </div>
+          )}
         </div>
       </CardBody>
     </Card>

@@ -144,16 +144,23 @@ export const USER: User = {
       },
     ],
     skills: [
+      { skill_name: "JavaScript", percentage: 100 },
+      { skill_name: "TypeScript", percentage: 70 },
       { skill_name: "HTML", percentage: 100 },
       { skill_name: "CSS", percentage: 70 },
-      { skill_name: "JavaScript", percentage: 70 },
-      { skill_name: "TypeScript", percentage: 70 },
-      { skill_name: "React", percentage: 70 },
-      { skill_name: "NodeJS", percentage: 40 },
+      { skill_name: "Java", percentage: 70 },
+      { skill_name: "React", percentage: 100 },
+      { skill_name: "NodeJS", percentage: 70 },
       { skill_name: "SQLite", percentage: 40 },
       { skill_name: "NoSQL", percentage: 70 },
       { skill_name: "MongoDB", percentage: 70 },
       { skill_name: "GitHub", percentage: 100 },
+      { skill_name: "Kotlin", percentage: 40 },
+      { skill_name: "Flutter", percentage: 40 },
+      { skill_name: "AWS", percentage: 40 },
+
+      { skill_name: "Angular", percentage: 15 },
+
       { skill_name: "Code Testing & Evaluation", percentage: 70 },
       { skill_name: "CI/CD automation", percentage: 40 },
     ],
@@ -256,5 +263,84 @@ export const USER: User = {
       provider_company_name: "GetSetUp",
     },
   ],
-  blogs: null,
+  blogs: [
+    {
+      title: "MERN stack for Web Development",
+      pubDate: "2022-12-25 13:10:51",
+      link: "https://awstip.com/mern-stack-for-web-development-72ff226f45ec?source=rss-4cf25a6bbe58------2",
+      guid: "https://medium.com/p/72ff226f45ec",
+      author: "GavinDmello",
+      thumbnail:
+        "https://cdn-images-1.medium.com/max/1024/0*BoZuMV2kfcjiiTDV.png",
+      description: `
+      <figure><img alt="MERN Stack" src="https://cdn-images-1.medium.com/max/1024/0*BoZuMV2kfcjiiTDV.png"></figure><h3><strong>What is MERN?</strong></h3>
+      <p>A MERN stack comprises a collection of four frameworks(MongoDB, ExpressJs, ReactJs and NodeJs) used to develop full-stack javascript solutions for rapid, scalable, and secure applications. Each framework serves a different purpose in creating successful web applications. It is an excellent choice for companies looking to develop high-quality responsive applications quickly using just one language.</p>
+      <p><strong>Advantages of using MERN</strong></p>
+      <ol>
+      <li>Offers high-performance and customized technologies for the development process.</li>
+      <li>All frameworks are open-source and have room for designing flexible and scalable applications.</li>
+      <li>Coding full-stack applications using just one programming language(JavaScript / TypeScript).</li>
+      <li>Ease of learning the frameworks as they follow similar patterns and support quality collaboration.</li>
+      <li>High delivery speed and secure code management.</li>
+      </ol>
+      <h3><strong>Elements of the MERN stack</strong></h3>
+      <figure><img alt="" src="https://cdn-images-1.medium.com/max/800/0*7PzQ8odzYp4p1e9r"></figure><ol>
+      <li>
+      <strong>MongoDB — </strong>It is an open-source document database and a leading NoSQL database. Data is stored in a JSON format called <a href="https://bsonspec.org/">BSON</a>. It is made up of schemas that define the structure of each table in the database. For this stack, the mongoose plugin can be used to build schemas and achieve a secure connection with the backend servers.</li>
+      <li>
+      <strong>ExpressJS — </strong>It is a minimal flexible web application framework built over NodeJs which is highly used for backend development by developers, who prefer using JavaScript/TypeScript as their primary programming language. ExpressJs is an open-source framework used for building scalable backend services and RESTful APIs, along with interacting with the database services using plugins such as mongoose.</li>
+      <li>
+      <strong>ReactJs — </strong>This is a frontend framework used for designing the interface, governing the user experience using the <a href="https://www.nngroup.com/articles/">UI/UX guidelines</a>, compiled and tested over decades and handling navigation between screens using the principles of <a href="https://reactnavigation.org/"><em>react-navigation </em></a>and <a href="https://github.com/remix-run/react-router#readme"><em>react-router-dom</em></a>. ReactJs also provides easy integration of npm packages and access to countless components from UI packages such as <a href="https://ant.design/">Ant Design</a>, MUI, React Bootstrap, etc.</li>
+      <li>
+      <strong>NodeJs — </strong>It is another open-source framework for server development. It is a JavaScript backend environment that enables developers to write backend services as well as design static web interfaces for services such as email verification, reset passwords, etc. NodeJS supports distributed development and has capabilities to support secure interaction over the network.</li>
+      </ol>
+      <p>Ready to create a new web application? Yes, then refer to the following articles for a step-by-step guide to configure the frameworks on your local machine.</p>
+      <ol>
+      <li>Configure ReactJs with TypeScript template</li>
+      <li>Setting up the backend using NodeJs &amp; ExpressJs</li>
+      <li>Setting up the database using Mongoose and MongoDB</li>
+      </ol>
+      <img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=72ff226f45ec" width="1" height="1" alt=""><hr>
+      <p><a href="https://awstip.com/mern-stack-for-web-development-72ff226f45ec">MERN stack for Web Development</a> was originally published in <a href="https://awstip.com/">AWS Tip</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+      `,
+      content: `
+      <figure><img alt="MERN Stack" src="https://cdn-images-1.medium.com/max/1024/0*BoZuMV2kfcjiiTDV.png"></figure><h3><strong>What is MERN?</strong></h3>
+      <p>A MERN stack comprises a collection of four frameworks(MongoDB, ExpressJs, ReactJs and NodeJs) used to develop full-stack javascript solutions for rapid, scalable, and secure applications. Each framework serves a different purpose in creating successful web applications. It is an excellent choice for companies looking to develop high-quality responsive applications quickly using just one language.</p>
+      <p><strong>Advantages of using MERN</strong></p>
+      <ol>
+      <li>Offers high-performance and customized technologies for the development process.</li>
+      <li>All frameworks are open-source and have room for designing flexible and scalable applications.</li>
+      <li>Coding full-stack applications using just one programming language(JavaScript / TypeScript).</li>
+      <li>Ease of learning the frameworks as they follow similar patterns and support quality collaboration.</li>
+      <li>High delivery speed and secure code management.</li>
+      </ol>
+      <h3><strong>Elements of the MERN stack</strong></h3>
+      <figure><img alt="" src="https://cdn-images-1.medium.com/max/800/0*7PzQ8odzYp4p1e9r"></figure><ol>
+      <li>
+      <strong>MongoDB — </strong>It is an open-source document database and a leading NoSQL database. Data is stored in a JSON format called <a href="https://bsonspec.org/">BSON</a>. It is made up of schemas that define the structure of each table in the database. For this stack, the mongoose plugin can be used to build schemas and achieve a secure connection with the backend servers.</li>
+      <li>
+      <strong>ExpressJS — </strong>It is a minimal flexible web application framework built over NodeJs which is highly used for backend development by developers, who prefer using JavaScript/TypeScript as their primary programming language. ExpressJs is an open-source framework used for building scalable backend services and RESTful APIs, along with interacting with the database services using plugins such as mongoose.</li>
+      <li>
+      <strong>ReactJs — </strong>This is a frontend framework used for designing the interface, governing the user experience using the <a href="https://www.nngroup.com/articles/">UI/UX guidelines</a>, compiled and tested over decades and handling navigation between screens using the principles of <a href="https://reactnavigation.org/"><em>react-navigation </em></a>and <a href="https://github.com/remix-run/react-router#readme"><em>react-router-dom</em></a>. ReactJs also provides easy integration of npm packages and access to countless components from UI packages such as <a href="https://ant.design/">Ant Design</a>, MUI, React Bootstrap, etc.</li>
+      <li>
+      <strong>NodeJs — </strong>It is another open-source framework for server development. It is a JavaScript backend environment that enables developers to write backend services as well as design static web interfaces for services such as email verification, reset passwords, etc. NodeJS supports distributed development and has capabilities to support secure interaction over the network.</li>
+      </ol>
+      <p>Ready to create a new web application? Yes, then refer to the following articles for a step-by-step guide to configure the frameworks on your local machine.</p>
+      <ol>
+      <li>Configure ReactJs with TypeScript template</li>
+      <li>Setting up the backend using NodeJs &amp; ExpressJs</li>
+      <li>Setting up the database using Mongoose and MongoDB</li>
+      </ol>
+      <img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=72ff226f45ec" width="1" height="1" alt=""><hr>
+      <p><a href="https://awstip.com/mern-stack-for-web-development-72ff226f45ec">MERN stack for Web Development</a> was originally published in <a href="https://awstip.com/">AWS Tip</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+      `,
+      categories: [
+        "mern-stack",
+        "react",
+        "serverless",
+        "web-development",
+        "nodejs",
+      ],
+    },
+  ],
 };
