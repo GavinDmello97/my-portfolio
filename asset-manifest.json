@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.bfb26d55.css",
-    "main.js": "/my-portfolio/static/js/main.7125fbed.js",
+    "main.js": "/my-portfolio/static/js/main.2f45b4f1.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/server-down.jpg": "/my-portfolio/static/media/server-down.663b0905a252be9d2500.jpg",
     "static/media/food-background-1.jpg": "/my-portfolio/static/media/food-background-1.c4dc8fb4298fe8d2e5d1.jpg",
     "static/media/notification-bell.gif": "/my-portfolio/static/media/notification-bell.0fbb0b9ea7f1a1457be4.gif",
-    "static/media/blogica.png": "/my-portfolio/static/media/blogica.16d9f7f6f2529000a72a.png",
     "static/media/profile-pic-2.jpeg": "/my-portfolio/static/media/profile-pic-2.d46f148bd57e6487fd22.jpeg",
-    "static/media/myportfolio.jpeg": "/my-portfolio/static/media/myportfolio.53da494c609faa67b6e3.jpeg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/my-portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/my-portfolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/my-portfolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/blogica.png": "/my-portfolio/static/media/blogica.68f02154c36dc213a0bd.png",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/my-portfolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/my-portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/banner-poster.jpeg": "/my-portfolio/static/media/banner-poster.7a191a461ef0cca0d519.jpeg",
+    "static/media/myportfolio.png": "/my-portfolio/static/media/myportfolio.c30dc8bfdfb001f8df0c.png",
     "static/media/404-error.png": "/my-portfolio/static/media/404-error.29fb0966d6ce490a8b11.png",
     "static/media/no_internet.png": "/my-portfolio/static/media/no_internet.4b8a2ad8199d6f09a5ff.png",
     "static/media/app_logo.png": "/my-portfolio/static/media/app_logo.863b3e6e48ca82cb4918.png",
@@ -28,11 +28,11 @@
     "static/media/loader.svg": "/my-portfolio/static/media/loader.20a032193282e842a5171692f26f991f.svg",
     "index.html": "/my-portfolio/index.html",
     "main.bfb26d55.css.map": "/my-portfolio/static/css/main.bfb26d55.css.map",
-    "main.7125fbed.js.map": "/my-portfolio/static/js/main.7125fbed.js.map",
+    "main.2f45b4f1.js.map": "/my-portfolio/static/js/main.2f45b4f1.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfb26d55.css",
-    "static/js/main.7125fbed.js"
+    "static/js/main.2f45b4f1.js"
   ]
 }
