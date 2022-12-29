@@ -174,12 +174,6 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
       />
       <CardBody className="p-0 pt-2">
         <div className="col-12 d-flex flex-column cardDescription ">
-          <ReactQuill
-            className=" noselect cursorPointer  col-12"
-            readOnly={true}
-            theme="bubble"
-            value={project.project_description}
-          />
           <div className=" col-12   p-0 m-0 py-2">
             <CardLink
               href={project.project_link}
@@ -189,7 +183,7 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
                 shape="round"
                 className={classNames("button-style w-100 text-wrap  h-100 ")}
               >
-                <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
+                {/* <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" /> */}
                 <span className="d-block d-sm-none d-xl-block">
                   {livePageButtonText[project.type as keyof LivePageButtonText]}
                 </span>
@@ -205,7 +199,7 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
                   "button-style custom-button-style w-100 text-wrap  h-100 mt-2"
                 )}
               >
-                <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" />
+                {/* <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" /> */}
                 <span className="d-block d-sm-none d-xl-block">
                   {"Source Code"}
                 </span>
