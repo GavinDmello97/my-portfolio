@@ -4,7 +4,7 @@ import { gifs, icons, images } from "../../config/configuration";
 import { Image, Tooltip, message } from "antd";
 import { User, UserProfile } from "../../config/types";
 import { CSSModule } from "reactstrap/types/lib/utils";
-import { formattingPhone } from "../../config/utils";
+import { formattingPhone, openInNewTab } from "../../config/utils";
 import Generic from "../../components/generic/Generic";
 import { Button } from "reactstrap";
 type ProfileInfoType = {
@@ -209,11 +209,14 @@ var SocialLink = ({
   iconClassName = "",
 }: SocialLinkType) => {
   return (
-    <a href={to} className={classNames("link", linkClassName)}>
+    <div
+      onClick={() => openInNewTab(to)}
+      className={classNames("link", linkClassName)}
+    >
       <i
         className={classNames(bootstrapIcon, bootstrapIconSize, iconClassName)}
       ></i>
-    </a>
+    </div>
   );
 };
 

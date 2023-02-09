@@ -20,13 +20,7 @@ export const USER: User = {
     },
     display_picture: "https://i.ibb.co/Lkg40HT/profile-pic.jpg",
   },
-  about: `I am a Software Developer able to build scalable Full Stack Web Application 
-          and Hybrid Mobile Application for business, e-commerce, e-learning, medical and non-profilt. Utilizing my proficiency in JavaScript and Java, 
-          I have designed a number of applications, packages and plugin from ground up - 
-          from concepts, planning, developing layouts & components, navigation and programming 
-          to UI/UX and SEO. Skilled at writing well-designed testable and effecient code using 
-          the best practices in Product Development. Fast learner, hard worker and team player 
-          who is proficient in an array of scripting languages and multimedia Web tools.`,
+  about: `I am a Software Developer based in Massachusetts. I have about 4 years of experience building scalable Full Stack Web Application and Hybrid Mobile Application for e-commerce, e-learning, medical and non-profit organizations. I am proficient in scripting languages and multimedia Web tools.`,
   resume: {
     bio: "Skilled at writing well-designed testable and effecient code using the best practices in Product Development.",
     education: [
@@ -200,7 +194,6 @@ export const USER: User = {
         "Mongo Atlas",
         "Cloud Messaging",
       ],
-      code_link: "https://github.com/GavinDmello97/blogica",
       project_link: "https://blogica.netlify.app/",
       type: "website",
     },

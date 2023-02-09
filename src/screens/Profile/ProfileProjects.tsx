@@ -21,6 +21,7 @@ import {
   setProjects,
 } from "../../redux/actionReducers/projectsOnDisplayReducer";
 import { ItemType } from "antd/es/menu/hooks/useItems";
+import { openInNewTab } from "../../config/utils";
 
 type ProfileProjectType = {
   projects: UserProject[];
@@ -175,36 +176,56 @@ const ProjectCard = ({ project }: { project: UserProject }) => {
       <CardBody className="p-0 pt-2">
         <div className="col-12 d-flex flex-column cardDescription ">
           <div className=" col-12 d-flex justify-content-start align-items-start   p-0 m-0 py-2">
-            <CardLink
-              href={project.project_link}
-              className="text-decoration-none col-6  m-0 pe-1"
-            >
-              <Button
-                shape="round"
-                className={classNames("button-style w-100 text-wrap  h-100  ")}
-              >
-                <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
-                <span className="d-block d-sm-none d-xl-block">
-                  {livePageButtonText[project.type as keyof LivePageButtonText]}
-                </span>
-              </Button>
-            </CardLink>
-            <CardLink
-              href={project.project_link}
-              className="text-decoration-none col-6 m-0 ps-1 "
-            >
-              <Button
-                shape="round"
-                className={classNames(
-                  "button-style custom-button-style w-100 text-wrap  h-100 "
-                )}
-              >
-                <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" />
-                <span className="d-block d-sm-none d-xl-block">
-                  {"Source Code"}
-                </span>
-              </Button>
-            </CardLink>
+            {project.project_link &&
+              project.project_link !== undefined &&
+              project.project_link.length > 0 && (
+                <div
+                  className={classNames(
+                    project.code_link ? "col-6" : "col-12",
+                    "text-decoration-none  m-0 pe-1 "
+                  )}
+                >
+                  <Button
+                    onClick={() => openInNewTab(project.project_link!)}
+                    shape="round"
+                    className={classNames(
+                      "button-style w-100 text-wrap  h-100  "
+                    )}
+                  >
+                    <i className="fa fa-globe fa-lg d-none d-sm-block d-xl-none" />
+                    <span className="d-block d-sm-none d-xl-block">
+                      {
+                        livePageButtonText[
+                          project.type as keyof LivePageButtonText
+                        ]
+                      }
+                    </span>
+                  </Button>
+                </div>
+              )}
+            {project.code_link &&
+              project.code_link !== undefined &&
+              project.code_link.length > 0 && (
+                <div
+                  className={classNames(
+                    project.project_link ? "col-6" : "col-12",
+                    "text-decoration-none  m-0 ps-1 "
+                  )}
+                >
+                  <Button
+                    onClick={() => openInNewTab(project.code_link!)}
+                    shape="round"
+                    className={classNames(
+                      "button-style custom-button-style w-100 text-wrap  h-100 "
+                    )}
+                  >
+                    <i className="fa fa-code fa-lg d-none d-sm-block d-xl-none" />
+                    <span className="d-block d-sm-none d-xl-block">
+                      {"Source Code"}
+                    </span>
+                  </Button>
+                </div>
+              )}
           </div>
 
           {/* Tech stack container */}
