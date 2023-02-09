@@ -1,4 +1,3 @@
-import React, { useState, useRef, useEffect } from "react";
 import {
   Routes,
   Route,
@@ -6,12 +5,9 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import Header from "../components/functional/Header";
 import { Profile } from "../screens/index";
-import ScrollToTop from "../components/generic/scrollToTop";
 import NotFound from "../components/generic/NotFound";
 // import NoInternetWrapper from "./generic/NoInternetWrapper";
-import NoInternet from "../components/generic/NoInternet";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 import { toggleTheme } from "../redux/actionReducers/rootReducer";

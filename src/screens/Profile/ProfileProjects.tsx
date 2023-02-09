@@ -1,20 +1,15 @@
 import classNames from "classnames";
-import { Button, Menu, MenuProps, Progress, Tag, Timeline } from "antd";
+import { Button, Menu, MenuProps } from "antd";
 import Generic from "../../components/generic/Generic";
 import {
-  UserResume,
-  UserResumeEducation,
-  UserResumeEmployment,
-  UserResumeSkill,
   UserProject,
   ProjectTabs as ProjectTabsTypes,
 } from "../../config/types";
 import { useState, useRef, MutableRefObject, useEffect } from "react";
 import useIntersection from "../../components/generic/useIntersection";
-import { AnimationControls, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { Card, CardBody, CardImg, CardLink, CardTitle } from "reactstrap";
-import ReactQuill from "react-quill";
+import { Card, CardBody, CardImg, CardTitle } from "reactstrap";
 import { cssHover } from "../../components/generic/hoverProps";
 import {
   setActiveTab,

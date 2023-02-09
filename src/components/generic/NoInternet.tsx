@@ -1,4 +1,3 @@
-import React, { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { images } from "../../config/configuration";
 import apis from "../../config/api";

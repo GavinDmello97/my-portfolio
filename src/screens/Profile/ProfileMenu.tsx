@@ -1,6 +1,5 @@
-import { MenuProps, Menu, Space } from "antd";
+import { Menu } from "antd";
 import classNames from "classnames";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import "./Profile.scss";
 

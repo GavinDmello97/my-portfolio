@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -7,26 +7,11 @@ import {
   Collapse,
   NavItem,
   NavLink,
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label,
-  Input,
 } from "reactstrap";
-import { Avatar, AvatarGroup } from "@chakra-ui/avatar";
 import { NavLink as RRNavLink, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 import { cssHover } from "../generic/hoverProps";
-import { icons, randomColorGenerator } from "../../config/configuration";
+import { randomColorGenerator } from "../../config/configuration";
 import { useMediaQuery } from "react-responsive";
 
 const avatarColor = randomColorGenerator();

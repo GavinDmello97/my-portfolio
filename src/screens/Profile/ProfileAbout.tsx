@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Button, Spin, Tooltip } from "antd";
+import { Button, Spin } from "antd";
 import Generic from "../../components/generic/Generic";
 import { MutableRefObject, useRef, useState } from "react";
 import useIntersection from "../../components/generic/useIntersection";

@@ -1,8 +1,7 @@
 import classNames from "classnames";
-import { Link, To } from "react-router-dom";
-import { gifs, icons, images } from "../../config/configuration";
+import { gifs } from "../../config/configuration";
 import { Image, Tooltip, message } from "antd";
-import { User, UserProfile } from "../../config/types";
+import { UserProfile } from "../../config/types";
 import { CSSModule } from "reactstrap/types/lib/utils";
 import { formattingPhone, openInNewTab } from "../../config/utils";
 import Generic from "../../components/generic/Generic";

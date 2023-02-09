@@ -1,5 +1,5 @@
-import React, {Component, ReactComponentElement} from 'react';
-import {Animate, AnimateGroup} from 'react-simple-animate';
+import React, { Component } from "react";
+import { Animate } from "react-simple-animate";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function (ComposedComponent: React.FunctionComponent) {
@@ -12,40 +12,40 @@ export default function (ComposedComponent: React.FunctionComponent) {
 
     componentDidMount() {
       this.handleConnectionChange();
-      window.addEventListener('online', this.handleConnectionChange);
-      window.addEventListener('offline', this.handleConnectionChange);
+      window.addEventListener("online", this.handleConnectionChange);
+      window.addEventListener("offline", this.handleConnectionChange);
     }
 
     componentWillUnmount() {
-      window.removeEventListener('online', this.handleConnectionChange);
-      window.removeEventListener('offline', this.handleConnectionChange);
+      window.removeEventListener("online", this.handleConnectionChange);
+      window.removeEventListener("offline", this.handleConnectionChange);
     }
 
     handleConnectionChange = () => {
-      const {isOffline} = this.state;
-      const condition = navigator.onLine ? 'online' : 'offline';
-      if (condition === 'online' && isOffline) {
+      const { isOffline } = this.state;
+      const condition = navigator.onLine ? "online" : "offline";
+      if (condition === "online" && isOffline) {
         const webPing = setInterval(() => {
-          fetch('//google.com', {
-            mode: 'no-cors',
+          fetch("//google.com", {
+            mode: "no-cors",
           })
             .then(() => {
-              this.setState({shouldSlideDown: false}, () =>
-                this.setState({play: true}, () => {
+              this.setState({ shouldSlideDown: false }, () =>
+                this.setState({ play: true }, () => {
                   setTimeout(
-                    () => this.setState({play: false, isOffline: false}),
-                    2000,
+                    () => this.setState({ play: false, isOffline: false }),
+                    2000
                   );
                   return clearInterval(webPing);
-                }),
+                })
               );
             })
-            .catch(error => {});
+            .catch((error) => {});
         }, 1000);
         return;
-      } else if (condition === 'offline') {
+      } else if (condition === "offline") {
         this.setState(
-          {isOffline: true, shouldSlideDown: true, play: true},
+          { isOffline: true, shouldSlideDown: true, play: true }
           // () => setTimeout(() => this.setState({play: false}), 2000),
         );
       }
@@ -54,15 +54,15 @@ export default function (ComposedComponent: React.FunctionComponent) {
     };
 
     render() {
-      const {play, shouldSlideDown, isOffline} = this.state;
-      var start = {transform: 'translate(0px, 0px)'};
+      const { play, shouldSlideDown, isOffline } = this.state;
+      var start = { transform: "translate(0px, 0px)" };
       if (isOffline && !shouldSlideDown) {
-        start = {transform: 'translate(0px, 40px)'};
+        start = { transform: "translate(0px, 40px)" };
       }
 
-      var end = {transform: 'translate(0px, 40px)'};
+      var end = { transform: "translate(0px, 40px)" };
       if (isOffline && !shouldSlideDown) {
-        end = {transform: 'translate(0px, 0px)'};
+        end = { transform: "translate(0px, 0px)" };
       }
       return (
         <Animate
@@ -75,7 +75,7 @@ export default function (ComposedComponent: React.FunctionComponent) {
           easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
           // onComplete={onCompleteCallBack} // call back function when animation is completed
         >
-          <div style={{marginTop: '-40px'}}>
+          <div style={{ marginTop: "-40px" }}>
             <div className="p-2 bg-primary">
               <p className="px-3 m-0 text-white">Internet connection lost</p>
             </div>

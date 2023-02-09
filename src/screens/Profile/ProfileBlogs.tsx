@@ -1,26 +1,13 @@
 import classNames from "classnames";
-import { Button, Menu, MenuProps, Progress, Tag, Timeline } from "antd";
+import { Button } from "antd";
 import Generic from "../../components/generic/Generic";
-import {
-  UserResume,
-  UserResumeEducation,
-  UserResumeEmployment,
-  UserResumeSkill,
-  UserBlog,
-  ProjectTabs as ProjectTabsTypes,
-} from "../../config/types";
-import { useState, useRef, MutableRefObject, useEffect } from "react";
+import { UserBlog } from "../../config/types";
+import { useState, useRef, MutableRefObject } from "react";
 import useIntersection from "../../components/generic/useIntersection";
-import { AnimationControls, motion, useAnimation } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
+import { motion, useAnimation } from "framer-motion";
+import { useSelector } from "react-redux";
 import { Card, CardBody, CardImg, CardLink, CardTitle } from "reactstrap";
-import ReactQuill from "react-quill";
 import { cssHover } from "../../components/generic/hoverProps";
-import {
-  setActiveTab,
-  setProjects,
-} from "../../redux/actionReducers/projectsOnDisplayReducer";
-import { ItemType } from "antd/es/menu/hooks/useItems";
 
 type ProfileBlogsType = {
   blogs: UserBlog[];
