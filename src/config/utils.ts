@@ -24,3 +24,7 @@ export const getItem = (
     type,
   } as MenuItem;
 };
+
+export const openInNewTab = (link: string) => {
+  window.open(link, "_blank", "noreferrer");
+};

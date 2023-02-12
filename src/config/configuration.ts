@@ -44,14 +44,7 @@ const dataObjects = {
   },
 };
 
-const icons: any = {
-  bookmark_selected: require("../assets/icons/bookmark_selected.png"),
-  bookmark_hover: require("../assets/icons/bookmark_hover.png"),
-  bookmark_unselected: require("../assets/icons/bookmark_unselected.png"),
-  search_black: require("../assets/icons/search_black.png"),
-  search_white: require("../assets/icons/search_white.png"),
-  app_logo: require("../assets/icons/app_logo.png"),
-};
+const icons: any = {};
 
 const images: any = {
   route_not_found: require("../assets/images/404-error.png"),
@@ -59,10 +52,11 @@ const images: any = {
   profile_pic: require("../assets/images/profile-pic-2.jpeg"),
   banner_poster: require("../assets/images/banner-poster.jpeg"),
   no_internet: require("../assets/images/no_internet.png"),
-  food_background: require("../assets/images/food-background-1.jpg"),
 };
 
-const gifs: any = {};
+const gifs: any = {
+  notification_bell: require("../assets/gifs/notification-bell.gif"),
+};
 const svgs: any = {
   wave: require("../assets/svgs/Wave.svg"),
   loading: require("../assets/svgs/loader.svg"),

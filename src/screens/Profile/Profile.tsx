@@ -1,11 +1,9 @@
-import { useState, useEffect, useRef, Key } from "react";
-import { useMediaQuery } from "react-responsive";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import "./Profile.scss";
-import { dataObjects, randomColorGenerator } from "../../config/configuration";
+import { dataObjects } from "../../config/configuration";
 import ProfileHead from "./ProfileHead";
-import { User, MenuItem, UserTestimony } from "../../config/types";
-import { Button, Carousel, Divider, Menu, MenuProps, Space, Spin } from "antd";
+import { User } from "../../config/types";
+import { Spin } from "antd";
 import ProfileAbout from "./ProfileAbout";
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +12,6 @@ import { USER } from "../../config/dataset";
 import ProfileMenu from "./ProfileMenu";
 import ProfileProjects from "./ProfileProjects";
 import { setProjectTabs } from "../../redux/actionReducers/projectsOnDisplayReducer";
-import Generic from "../../components/generic/Generic";
 import ProfileTestimony from "./ProfileTestimony";
 import ProfileBlogs from "./ProfileBlogs";
 
@@ -54,7 +51,7 @@ const Profile = (props: any) => {
             },
           ])
         );
-    }, 2000);
+    }, 200);
   }, []);
 
   const state = useSelector((state: any) => {

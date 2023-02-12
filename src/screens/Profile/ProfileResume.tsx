@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Button, Progress, Tag, Timeline } from "antd";
+import { Button, Tag, Timeline } from "antd";
 import Generic from "../../components/generic/Generic";
 import {
   UserResume,
@@ -7,9 +7,9 @@ import {
   UserResumeEmployment,
   UserResumeSkill,
 } from "../../config/types";
-import { useState, useRef, MutableRefObject, useEffect } from "react";
+import { useState, useRef, MutableRefObject } from "react";
 import useIntersection from "../../components/generic/useIntersection";
-import { AnimationControls, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useSelector } from "react-redux";
 
 type ProfileAboutType = {

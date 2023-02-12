@@ -20,13 +20,7 @@ export const USER: User = {
     },
     display_picture: "https://i.ibb.co/Lkg40HT/profile-pic.jpg",
   },
-  about: `I am a Software Developer able to build scalable Full Stack Web Application 
-          and Hybrid Mobile Application for business, e-commerce, e-learning, medical and non-profilt. Utilizing my proficiency in JavaScript and Java, 
-          I have designed a number of applications, packages and plugin from ground up - 
-          from concepts, planning, developing layouts & components, navigation and programming 
-          to UI/UX and SEO. Skilled at writing well-designed testable and effecient code using 
-          the best practices in Product Development. Fast learner, hard worker and team player 
-          who is proficient in an array of scripting languages and multimedia Web tools.`,
+  about: `I am a Software Developer based in Massachusetts. I have about 4 years of experience building scalable Full Stack Web Application and Hybrid Mobile Application for e-commerce, e-learning, medical and non-profit organizations. I am proficient in scripting languages and multimedia Web tools.`,
   resume: {
     bio: "Skilled at writing well-designed testable and effecient code using the best practices in Product Development.",
     education: [
@@ -145,24 +139,24 @@ export const USER: User = {
     ],
     skills: [
       { skill_name: "JavaScript", percentage: 100 },
-      { skill_name: "TypeScript", percentage: 70 },
+      { skill_name: "TypeScript", percentage: 68 },
       { skill_name: "HTML", percentage: 100 },
-      { skill_name: "CSS", percentage: 70 },
-      { skill_name: "Java", percentage: 70 },
+      { skill_name: "CSS", percentage: 68 },
+      { skill_name: "Java", percentage: 68 },
       { skill_name: "React", percentage: 100 },
-      { skill_name: "NodeJS", percentage: 70 },
-      { skill_name: "SQLite", percentage: 40 },
-      { skill_name: "NoSQL", percentage: 70 },
-      { skill_name: "MongoDB", percentage: 70 },
+      { skill_name: "NodeJS", percentage: 68 },
+      { skill_name: "SQLite", percentage: 36 },
+      { skill_name: "NoSQL", percentage: 68 },
+      { skill_name: "MongoDB", percentage: 68 },
       { skill_name: "GitHub", percentage: 100 },
-      { skill_name: "Kotlin", percentage: 40 },
-      { skill_name: "Flutter", percentage: 40 },
-      { skill_name: "AWS", percentage: 40 },
+      { skill_name: "Kotlin", percentage: 36 },
+      { skill_name: "Flutter", percentage: 36 },
+      { skill_name: "AWS", percentage: 36 },
 
-      { skill_name: "Angular", percentage: 15 },
+      { skill_name: "Angular", percentage: 5 },
 
-      { skill_name: "Code Testing & Evaluation", percentage: 70 },
-      { skill_name: "CI/CD automation", percentage: 40 },
+      { skill_name: "Code Testing & Evaluation", percentage: 68 },
+      { skill_name: "CI/CD automation", percentage: 36 },
     ],
   },
   projects: [
@@ -170,7 +164,7 @@ export const USER: User = {
       project_name: "My Portfolio",
       project_description:
         "An animated portfolio template to showcase your skills/projects/blogs/talent/others and improve your chances of getting noticed well before other candidates when you apply, next.",
-      thumbnail: require(`../assets/images/delete_later/myportfolio.jpeg`),
+      thumbnail: require(`../assets/images/delete_later/myportfolio.png`),
       tech_stack: [
         "React.js",
         "SASS",
@@ -179,7 +173,7 @@ export const USER: User = {
         "TypeScript",
       ],
       code_link: "https://github.com/GavinDmello97/my-portfolio",
-      project_link: "github.io/my-portfolio/",
+      project_link: "https://gavindmello97.github.io/my-portfolio/",
       type: "website",
     },
 
@@ -200,9 +194,7 @@ export const USER: User = {
         "Mongo Atlas",
         "Cloud Messaging",
       ],
-      code_link:
-        "https://github.com/GavinDmello97/Masters_project/implementation",
-      project_link: "github.io/blocica/",
+      project_link: "https://blogica.netlify.app/",
       type: "website",
     },
     {
@@ -219,33 +211,32 @@ export const USER: User = {
         "Animatable JS",
         "Mongo DB + Atlas",
       ],
-      code_link:
-        "https://github.com/GavinDmello97/Masters_project/implementation",
-      project_link: "github.io/blocica/",
+      code_link: "https://github.com/Build-My-Stack",
+      project_link: "https://build-my-stack.github.io/recipe-diary-frontend/",
       type: "website",
     },
-    {
-      project_name: "Dia Fit",
-      project_description:
-        "Dia fit is a mobile platform application for android and ios users to track your diet, use follow along excercises as well as excercise usage of other features such as BMI calculator and Fat Percentage calculator",
-      thumbnail:
-        "https://i.pinimg.com/736x/2c/f0/3a/2cf03abcf226439e4608d5081f897675.jpg",
+    // {
+    //   project_name: "Dia Fit",
+    //   project_description:
+    //     "Dia fit is a mobile platform application for android and ios users to track your diet, use follow along excercises as well as excercise usage of other features such as BMI calculator and Fat Percentage calculator",
+    //   thumbnail:
+    //     "https://i.pinimg.com/736x/2c/f0/3a/2cf03abcf226439e4608d5081f897675.jpg",
 
-      tech_stack: [
-        "React-Native",
-        "SASS",
-        "GitHub",
-        "Redux",
-        "Animatable",
-        "REST APIs",
-        "Axios",
-        "CI/CD",
-      ],
-      code_link:
-        "https://github.com/GavinDmello97/Masters_project/implementation",
-      project_link: "github.io/blocica/",
-      type: "mobile",
-    },
+    //   tech_stack: [
+    //     "React-Native",
+    //     "SASS",
+    //     "GitHub",
+    //     "Redux",
+    //     "Animatable",
+    //     "REST APIs",
+    //     "Axios",
+    //     "CI/CD",
+    //   ],
+    //   // code_link:
+    //   //   "https://github.com/GavinDmello97/Masters_project/implementation",
+    //   // project_link: "github.io/blocica/",
+    //   type: "mobile",
+    // },
   ],
   testimonies: [
     {
@@ -261,6 +252,20 @@ export const USER: User = {
       provider_position: "Technical Lead",
       provider_message: `Gavin is someone who is able to effectively learn new programming concepts and technologies and apply them in a practical setting. He has strong foundation in computer science and able to write clean, efficient, and well-documented code. In addition, he's great team player, able to communicate effectively with both technical and non-technical colleagues, and very proactive in seeking out opportunities to learn and improve his skills. I found him very proficient at troubleshooting and debuging code and has exhibited great ability to work independently on assigned tasks.`,
       provider_company_name: "GetSetUp",
+    },
+    {
+      provider_first_name: "Patrick",
+      provider_last_name: "Owens",
+      provider_position: "Eng Manager",
+      provider_message: `Gavin has a number of personal and professional qualities that makes him a great asset to a team and successful in his endeavours. Gavin brings curiosity and initiative to a team and expresses ideas, needs, criticism and progress clearly. Gavin has effectively coached junior developers and convincly pitched ideas to upper management which shows that he has great potential and dedication to work he sets his mind on.`,
+      provider_company_name: "GetSetUp",
+    },
+    {
+      provider_first_name: "Amir",
+      provider_last_name: "Akhavan",
+      provider_position: "Professor",
+      provider_message: `Gavin enjoys developing intuitive software application and shows great interest in learning, which I observed by his attentiveness and dedication to the class as well as his curiosity to learn beyond the scope of the course. To add to this, he had good communication skills and contributes effectively to all the team activities related to his coursework. I was also his project mentor for master's project and while mentoring him, I realised that he has a great sense of developing good UI/UX, takes complete ownership of the projects and appreciates feedback and inputs given by me and his application's target audience (a very important skill in the field of software development).`,
+      provider_company_name: "Unversity of Massachusetts",
     },
   ],
   blogs: [

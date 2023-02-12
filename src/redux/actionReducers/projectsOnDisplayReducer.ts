@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { MenuProps } from "antd";
-import { ProjectTabs, User, UserProject } from "../../config/types";
+import { ProjectTabs, UserProject } from "../../config/types";
 
 export interface initialProjectsState {
   activeTab: string;

@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
-import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { cssHover } from "./hoverProps";
-import { icons } from "../../config/configuration";
 import classNames from "classnames";
 import { Progress, Tag } from "antd";
-import { CSSModule } from "reactstrap/types/lib/utils";
 import "./Generic.scss";
 const Generic = {
   AnimatedText: ({

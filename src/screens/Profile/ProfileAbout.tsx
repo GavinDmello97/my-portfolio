@@ -42,14 +42,6 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
       <div className="col-12 container py-5" ref={ref}>
         <Generic.AnimatedText text={"Hi_"} viewPortVisible={isInViewport} />
 
-        {/* <Animate
-          play={isInViewport} // set play true to start the animation
-          duration={1} // how long is the animation duration
-          delay={0} // how many delay seconds will apply before the animation start
-          start={{ marginRight: "200%", opacity: 0 }}
-          end={{ marginRight: "0%", opacity: 1 }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        > */}
         <motion.div
           initial={{ opacity: 0, transform: "translateX(300px)" }}
           animate={controls}
@@ -57,7 +49,6 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
         >
           <p className="col-12 py-3">{aboutMe}</p>
         </motion.div>
-        {/* </Animate> */}
         <Button
           disabled={isLoading}
           shape="round"
@@ -68,6 +59,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
           {!isLoading ? (
             <div>
               <i className="fa fa-download fa-md me-2 "></i>
+
               <span className="f-karla">Download CV</span>
             </div>
           ) : (
