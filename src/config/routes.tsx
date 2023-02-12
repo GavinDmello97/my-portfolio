@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { Profile } from "../screens/index";
 import NotFound from "../components/generic/NotFound";
-// import NoInternetWrapper from "./generic/NoInternetWrapper";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 import { toggleTheme } from "../redux/actionReducers/rootReducer";
