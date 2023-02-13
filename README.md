@@ -9,7 +9,7 @@ A lightweight mobile-responsive React application showcasing my education, exper
 
 **Tech stack:** `React.js, Bootstrap, HTML5, CSS3, Scss, JSON`
 
-**DEMO** Check out [**my software developer porfolio**](https://gavindmello97.github.io/my-portfolio/#/) designed using this project, deployed on [**gh-pages**](https://www.npmjs.com/package/gh-pages)
+**DEMO** Check out [**my software developer porfolio**](https://gavindmello97.github.io/my-portfolio/#/) designed using this project, deployed on [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 ## Project Tables
 
