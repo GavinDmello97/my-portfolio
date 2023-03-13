@@ -31,7 +31,7 @@ const ProfileAbout = ({ aboutMe = "", className = "" }: ProfileAboutType) => {
     // Setting various property values
     let alink = document.createElement("a");
     alink.href =
-      "https://drive.google.com/uc?export=download&id=1X33Pnn9-rbi2ozP2wEYIFkTjyOl1cwsf";
+      "https://drive.google.com/uc?export=download&id=1Zz6pWoi-dwCvs9vLk7MNW-cZpEfUZbBU";
     alink.download = "Gavin_Dmello_Resume.pdf";
     alink.click();
     setTimeout(() => setButtonLoading(false), 2000);

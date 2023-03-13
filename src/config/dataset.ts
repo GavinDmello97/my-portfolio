@@ -5,14 +5,14 @@ export const USER: User = {
     first_name: "Gavin",
     middle_name: "Edwin",
     last_name: "D'mello",
-    job_title: "Full Stack Web Developer, Hybrid Mobile App Developer",
+    job_title: "Full Stack Web Developer, Cross-platform Mobile App Developer",
     age: 26,
     email: "gavindmello1997@gmail.com",
     phone_country_code: "+1",
     phone: "7745261065",
     address: "61 Parker St., New Bedford, MA - 02740, USA",
     social_links: {
-      github: "https://github.com/GavinDmello97",
+      github: "https://github.com/eliterudy/",
       linkedIn: "https://www.linkedin.com/in/gd97",
       facebook: "https://www.facebook.com/gdmello579",
       twitter: "https://twitter.com/d_mello_gavin",
@@ -20,7 +20,7 @@ export const USER: User = {
     },
     display_picture: "https://i.ibb.co/Lkg40HT/profile-pic.jpg",
   },
-  about: `I am a Software Developer based in Massachusetts. I have about 4 years of experience building scalable Full Stack Web Application and Hybrid Mobile Application for e-commerce, e-learning, medical and non-profit organizations. I am proficient in scripting languages and multimedia Web tools.`,
+  about: ` I am a Software Developer with 3+ years of experience in software development, debugging and testing. Proficient in building full-stack web and mobile applications, with expertise in UI/UX, Database and System Designs. Highly skilled in Javascript, TypeScript, Java and SQL, as well as using frameworks like  React, Node.js, Postgres and MongoDB. Adept in Agile practices and team collaboration, with a strong focus on continuous improvement.`,
   resume: {
     bio: "Skilled at writing well-designed testable and effecient code using the best practices in Product Development.",
     education: [
@@ -54,6 +54,23 @@ export const USER: User = {
       },
     ],
     employment: [
+      {
+        position_title: "Software Developer | Graduate Assistatnt",
+        company_name: "University of Massachusetts, Dartmouth",
+        start_month: "Jan",
+        start_year: "2023",
+        end_month: "May",
+        end_year: "2023",
+        job_description: "",
+        tech_stack: [
+          "Algorithms",
+          "React Native",
+          "Node.js",
+          "MongoDB",
+          "AWS EC2",
+          "Deployment",
+        ],
+      },
       {
         position_title:
           "Graduate Mentor for Courseworks - Paradigmatic Software and Data Visualization",
@@ -152,9 +169,7 @@ export const USER: User = {
       { skill_name: "Kotlin", percentage: 36 },
       { skill_name: "Flutter", percentage: 36 },
       { skill_name: "AWS", percentage: 36 },
-
       { skill_name: "Angular", percentage: 5 },
-
       { skill_name: "Code Testing & Evaluation", percentage: 68 },
       { skill_name: "CI/CD automation", percentage: 36 },
     ],
@@ -172,8 +187,8 @@ export const USER: User = {
         "Motion-Animations",
         "TypeScript",
       ],
-      code_link: "https://github.com/GavinDmello97/my-portfolio",
-      project_link: "https://gavindmello97.github.io/my-portfolio/",
+      code_link: "https://github.com/eliterudy/my-portfolio",
+      project_link: "https://eliterudy.github.io/my-portfolio/",
       type: "website",
     },
 
@@ -211,8 +226,8 @@ export const USER: User = {
         "Animatable JS",
         "Mongo DB + Atlas",
       ],
-      code_link: "https://github.com/Build-My-Stack",
-      project_link: "https://build-my-stack.github.io/recipe-diary-frontend/",
+      code_link: "https://github.com/eliterudy/recipe-diary-frontend/",
+      project_link: "https://eliterudy.github.io/recipe-diary-frontend/",
       type: "website",
     },
     // {
